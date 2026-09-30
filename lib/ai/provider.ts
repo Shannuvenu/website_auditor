@@ -3,7 +3,12 @@ export interface LLM { name: string; complete(system: string, user: string): Pro
 
 async function post(url: string, headers: Record<string, string>, body: unknown) {
   const r = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify(body), signal: AbortSignal.timeout(90_000) });
-  const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(`LLM HTTP ${r.status}`); return j;
+  const j: any = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const msg = j?.error?.message ?? j?.error?.status ?? j?.message ?? '';
+    throw new Error(`HTTP ${r.status} ${String(msg).slice(0, 200)}`.trim());
+  }
+  return j;
 }
 
 export function getProvider(): LLM | null {

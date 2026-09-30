@@ -1,5 +1,5 @@
 import { getProvider } from '@/lib/ai/provider';
-import { ALL } from '@/lib/scoring/score';
+import { CARDS } from '@/lib/scoring/score';
 import type { CrawlFacts } from '@/lib/crawler/crawl';
 import type { Finding, PsiResult } from '@/types/audit';
 import type { Recommendations } from '@/types/recommendations';
@@ -16,7 +16,7 @@ const arr = (x: unknown): string[] => (Array.isArray(x) ? x.filter((s) => typeof
 export async function generateRecommendations(url: string, crawl: CrawlFacts | null, mobile: PsiResult, desktop: PsiResult, findings: Finding[]): Promise<Recommendations> {
   const llm = getProvider();
   if (!llm) return { available: false, reason: 'No AI provider configured. Showing verified findings only.' };
-  const sent = findings.filter((f) => f.status === 'FAIL' || f.status === 'WARNING' || f.status === 'INCOMPLETE' || f.status === 'ERROR' || f.status === 'NOT_APPLICABLE')
+  const sent = findings.filter((f) => CARDS.includes(f.category) && ['FAIL', 'WARNING', 'INCOMPLETE', 'ERROR', 'NOT_APPLICABLE'].includes(f.status))
     .sort((a, b) => RANK[a.severity] - RANK[b.severity]).slice(0, 70);
   const valid = new Set(sent.map((f) => f.id));
   const evidence = {
@@ -31,8 +31,8 @@ export async function generateRecommendations(url: string, crawl: CrawlFacts | n
     const fixes = (Array.isArray(p.highestImpactFixes) ? p.highestImpactFixes : [])
       .map((f: any) => ({ title: String(f?.title ?? ''), evidence: String(f?.evidence ?? ''), steps: arr(f?.steps), findingIds: arr(f?.findingIds).filter((id) => valid.has(id)) }))
       .filter((f: any) => f.title && f.findingIds.length > 0 && f.steps.length > 0);
-    const cats = (Array.isArray(p.categoryAnalysis) ? p.categoryAnalysis : []).filter((c: any) => ALL.includes(c?.category) && typeof c?.analysis === 'string');
+    const cats = (Array.isArray(p.categoryAnalysis) ? p.categoryAnalysis : []).filter((c: any) => CARDS.includes(c?.category) && typeof c?.analysis === 'string');
     const pr = p.priorities ?? {};
     return { available: true, summary: String(p.summary ?? ''), biggestIssues: arr(p.biggestIssues), highestImpactFixes: fixes, categoryAnalysis: cats, priorities: { shortTerm: arr(pr.shortTerm), mediumTerm: arr(pr.mediumTerm), ongoing: arr(pr.ongoing) } };
-  } catch (e: any) { console.log('[ai] failed', e?.message); return { available: false, reason: 'AI analysis failed (rate limit or invalid JSON). Showing verified findings only. Try again in a minute.' }; }
+  } catch (e: any) { console.log('[ai] failed', e?.message); return { available: false, reason: `AI analysis failed: ${e?.message ?? 'unknown error'}. Showing verified findings only.` }; }
 }

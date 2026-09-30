@@ -1,6 +1,7 @@
 import type { Finding, PsiResult } from '@/types/audit';
 
 export const ALL = ['Performance', 'SEO', 'Accessibility', 'Best Practices', 'Security', 'Mobile', 'Technical SEO', 'Images', 'Resources', 'Social Tags', 'Content Quality', 'Analytics & Tracking', 'Domain & DNS', 'Content Freshness', 'Contact Information', 'Links'];
+export const CARDS = ['Performance', 'Accessibility', 'Best Practices', 'Security', 'Technical SEO'];
 const PSI: Record<string, string> = { Performance: 'performance', SEO: 'seo', Accessibility: 'accessibility', 'Best Practices': 'best-practices' };
 const PEN: Record<string, number> = { critical: 30, high: 20, medium: 10, low: 5, info: 0 };
 
@@ -20,9 +21,9 @@ export function scoreAll(findings: Finding[], mobile: PsiResult) {
       cats[name] = { score: null, source: PSI[name] ? 'Lighthouse / PageSpeed (unavailable)' : 'Own verified checks (not applicable / no data)', issues, checks: 0 };
     }
   }
-  const vals = Object.values(cats).map((c) => c.score).filter((s): s is number => s != null);
+  const vals = CARDS.map((n) => cats[n]?.score).filter((s): s is number => s != null);
   const overall = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : null;
-  const bad = findings.filter((f) => f.status === 'FAIL' || f.status === 'WARNING');
+  const bad = findings.filter((f) => CARDS.includes(f.category) && (f.status === 'FAIL' || f.status === 'WARNING'));
   const sev = (s: string) => bad.filter((f) => f.severity === s).length;
   return { categories: cats, overall, severity: { critical: sev('critical'), high: sev('high'), medium: sev('medium'), low: sev('low') }, totalIssues: bad.length };
 }

@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 
 const STAGES = ['Fetching website', 'Running PageSpeed analysis', 'Checking SEO', 'Checking security', 'Analyzing resources', 'Generating recommendations'];
+const SHOW = ['Performance', 'Accessibility', 'Best Practices', 'Security', 'Technical SEO'];
 const SEV: Record<string, string> = { critical: 'bg-red-100 text-red-800', high: 'bg-orange-100 text-orange-800', medium: 'bg-yellow-100 text-yellow-800', low: 'bg-blue-100 text-blue-800', info: 'bg-slate-100 text-slate-700' };
 const RATING: Record<string, string> = { good: 'text-green-600', 'needs-improvement': 'text-orange-500', poor: 'text-red-600', unavailable: 'text-slate-400' };
 const RLABEL: Record<string, string> = { good: 'Good', 'needs-improvement': 'Needs Improvement', poor: 'Poor', unavailable: 'Unavailable' };
@@ -57,9 +58,9 @@ export default function Home() {
 }
 
 function Report({ d }: { d: any }) {
-  const cats = Object.entries<any>(d.categories);
+  const cats = Object.entries<any>(d.categories).filter(([n]) => SHOW.includes(n));
   const groups: Record<string, any[]> = {};
-  d.issues.forEach((i: any) => (groups[i.category] ||= []).push(i));
+  d.issues.filter((i: any) => SHOW.includes(i.category)).forEach((i: any) => (groups[i.category] ||= []).push(i));
   const m = d.pagespeed.mobile, r = d.recommendations;
   return (
     <div className="mt-10 space-y-8">
@@ -74,7 +75,7 @@ function Report({ d }: { d: any }) {
         {!d.pagespeed.desktop.ok && <p className="mt-1 text-sm text-orange-700">PageSpeed (desktop): audit incomplete — {d.pagespeed.desktop.error}</p>}
       </section>
 
-      <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 md:grid-cols-5">
         {cats.map(([n, c]) => (
           <div key={n} className="rounded-xl border bg-white p-4"><p className="text-sm font-medium">{n}</p>
             <p className={`text-3xl font-bold ${col(c.score)}`}>{c.score ?? 'N/A'}</p>
@@ -88,7 +89,8 @@ function Report({ d }: { d: any }) {
             return <div key={k} className="rounded-xl border bg-white p-4"><p className="text-xs font-semibold uppercase text-slate-500">{k}</p><p className="text-lg font-bold">{x.display}</p><p className={`text-sm ${RATING[x.rating]}`}>{RLABEL[x.rating]}</p></div>; })}
         </div>
         <p className="mt-2 text-xs text-slate-500">INP is only available from real-user field data when Google has enough traffic for this URL.</p></section>
-            <section><h2 className="mb-3 text-xl font-semibold">PageSpeed Insights <span className="text-sm font-normal text-slate-500">(Google Lighthouse)</span></h2>
+
+      <section><h2 className="mb-3 text-xl font-semibold">PageSpeed Insights <span className="text-sm font-normal text-slate-500">(Google Lighthouse)</span></h2>
         <div className="grid gap-3 md:grid-cols-2">
           {(['mobile', 'desktop'] as const).map((st) => { const p = d.pagespeed[st]; return (
             <div key={st} className="rounded-xl border bg-white p-4">
@@ -99,6 +101,7 @@ function Report({ d }: { d: any }) {
               </>)}
             </div>); })}
         </div></section>
+
       <section><h2 className="mb-3 text-xl font-semibold">Expert Analysis <span className="text-sm font-normal text-slate-500">(AI interpretation of verified data)</span></h2>
         {!r.available ? <p className="rounded-xl border bg-white p-4 text-slate-600">{r.reason}</p> : (
           <div className="space-y-4 rounded-xl border bg-white p-6">
