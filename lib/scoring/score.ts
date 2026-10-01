@@ -1,15 +1,18 @@
 import type { Finding, PsiResult } from '@/types/audit';
 
 export const ALL = ['Performance', 'SEO', 'Accessibility', 'Best Practices', 'Security', 'Mobile', 'Technical SEO', 'Images', 'Resources', 'Social Tags', 'Content Quality', 'Analytics & Tracking', 'Domain & DNS', 'Content Freshness', 'Contact Information', 'Links'];
-export const CARDS = ['Performance', 'Accessibility', 'Best Practices', 'Security', 'Technical SEO'];
+export const CARDS = ['Performance', 'Accessibility', 'Best Practices', 'Security'];
 const PSI: Record<string, string> = { Performance: 'performance', SEO: 'seo', Accessibility: 'accessibility', 'Best Practices': 'best-practices' };
-const PEN: Record<string, number> = { critical: 30, high: 20, medium: 10, low: 5, info: 0 };
+const PEN: Record<string, number> = { critical: 30, high: 20, medium: 10, low: 0, info: 0 };
+const SHOWN = ['critical', 'high', 'medium'];
+const ISSUE = ['FAIL', 'WARNING', 'ERROR'];
+const isIssue = (f: Finding) => ISSUE.includes(f.status) && SHOWN.includes(f.severity);
 
 export function scoreAll(findings: Finding[], mobile: PsiResult) {
   const cats: Record<string, { score: number | null; source: string; issues: number; checks: number }> = {};
   for (const name of ALL) {
     const fs = findings.filter((f) => f.category === name);
-    const issues = fs.filter((f) => f.status === 'FAIL' || f.status === 'WARNING').length;
+    const issues = fs.filter(isIssue).length;
     const cr = fs.filter((f) => f.source === 'crawler' && f.status !== 'NOT_APPLICABLE' && f.status !== 'INCOMPLETE' && f.id !== 'analytics' && f.id !== 'freshness');
     const psi = PSI[name] && mobile.ok ? mobile.scores?.[PSI[name]] ?? null : null;
     if (psi != null) {
@@ -23,7 +26,7 @@ export function scoreAll(findings: Finding[], mobile: PsiResult) {
   }
   const vals = CARDS.map((n) => cats[n]?.score).filter((s): s is number => s != null);
   const overall = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : null;
-  const bad = findings.filter((f) => CARDS.includes(f.category) && (f.status === 'FAIL' || f.status === 'WARNING'));
+  const bad = findings.filter((f) => CARDS.includes(f.category) && isIssue(f));
   const sev = (s: string) => bad.filter((f) => f.severity === s).length;
-  return { categories: cats, overall, severity: { critical: sev('critical'), high: sev('high'), medium: sev('medium'), low: sev('low') }, totalIssues: bad.length };
+  return { categories: cats, overall, severity: { critical: sev('critical'), high: sev('high'), medium: sev('medium') }, totalIssues: bad.length };
 }

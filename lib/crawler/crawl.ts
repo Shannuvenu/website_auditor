@@ -10,7 +10,7 @@ const ANALYTICS: Record<string, RegExp> = {
   'Hotjar': /hotjar\.com/i, 'Microsoft Clarity': /clarity\.ms/i, 'Mixpanel': /mixpanel\.com/i,
 };
 
-export async function crawl(url: string) {
+export async function crawl(url: string, checkText?: string) {
   const r = await safeFetch(url);
   const origin = new URL(r.finalUrl).origin, host = new URL(r.finalUrl).hostname;
   const isHtml = /html/i.test(r.headers['content-type'] ?? '');
@@ -53,6 +53,7 @@ export async function crawl(url: string) {
 
   const modified = r.headers['last-modified'] ?? meta('meta[property="article:modified_time"]') ?? (rawHtml.match(/"dateModified"\s*:\s*"([^"]+)"/)?.[1] ?? null);
   const headings = $('h1,h2,h3,h4,h5,h6').map((_, e) => (e as any).tagName.toLowerCase()).get() as string[];
+  const needle = checkText ? checkText.toLowerCase() : '';
 
   return {
     http: { status: r.status, finalUrl: r.finalUrl, ms: r.ms, chain: r.chain, contentType: r.headers['content-type'] ?? null, headers: r.headers, truncated: r.truncated, isHtml, https: r.finalUrl.startsWith('https:') },
@@ -69,6 +70,7 @@ export async function crawl(url: string) {
     security: { mixedContent: mixed },
     domain: { host, dnsAddrs, cert },
     freshness: { lastModified: modified },
+    serverCheck: checkText ? { text: checkText, inHtml: rawHtml.toLowerCase().includes(needle), inVisibleText: text.toLowerCase().includes(needle) } : null,
   };
 }
 export type CrawlFacts = Awaited<ReturnType<typeof crawl>>;

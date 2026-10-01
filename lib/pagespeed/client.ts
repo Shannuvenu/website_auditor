@@ -11,7 +11,7 @@ const mk = (k: string, v: number | null | undefined, unit: 'ms' | 'cls'): Metric
 export async function runPsi(url: string, strategy: 'mobile' | 'desktop'): Promise<PsiResult> {
   const key = process.env.PAGESPEED_API_KEY;
   if (!key) return { ok: false, error: 'PAGESPEED_API_KEY is not configured on the server.' };
-  const ck = `psi:${strategy}:${url}:${CATS.join(',')}`;
+  const ck = `psi:${strategy}:${url}:${CATS.join(',')}:v2`;
   const hit = cache.get<PsiResult>(ck); if (hit) return hit;
   const p = new URLSearchParams({ url, strategy, key }); CATS.forEach((c) => p.append('category', c));
   try {
@@ -51,7 +51,20 @@ export async function runPsi(url: string, strategy: 'mobile' | 'desktop'): Promi
       };
     });
 
-    const out: PsiResult = { ok: true, scores, metrics, audits, warnings: lh.runWarnings ?? [] };
+    // Exact culprits: concrete evidence for the AI (LCP element, heavy scripts, third parties, images, fonts, render-blocking)
+    const det = (id: string): any[] => arr(A[id]?.details?.items);
+    const short = (u: unknown) => String(u ?? '').slice(0, 140);
+    const extra = {
+      lcpElement: det('largest-contentful-paint-element').flatMap((t: any) => arr(t?.items)).filter((i: any) => i?.node).slice(0, 1).map((i: any) => ({ snippet: short(i.node.snippet), selector: short(i.node.selector) })),
+      thirdParty: det('third-party-summary').slice(0, 12).map((i: any) => ({ entity: typeof i.entity === 'string' ? i.entity : i.entity?.text, blockingMs: Math.round(i.blockingTime ?? 0), transferKB: Math.round((i.transferSize ?? 0) / 1024) })),
+      scripts: det('bootup-time').slice(0, 8).map((i: any) => ({ url: short(i.url), scriptingMs: Math.round(i.scripting ?? 0), totalMs: Math.round(i.total ?? 0) })),
+      heavyRequests: det('network-requests').filter((i: any) => typeof i.transferSize === 'number').sort((a: any, b: any) => b.transferSize - a.transferSize).slice(0, 10).map((i: any) => ({ url: short(i.url), kb: Math.round(i.transferSize / 1024), type: i.resourceType })),
+      imageIssues: ['uses-responsive-images', 'modern-image-formats', 'offscreen-images', 'uses-optimized-images'].flatMap((id) => det(id).slice(0, 6).map((i: any) => ({ audit: id, url: short(i.url), wastedKB: Math.round((i.wastedBytes ?? 0) / 1024) }))),
+      fonts: det('font-display').slice(0, 6).map((i: any) => ({ url: short(i.url), wastedMs: Math.round(i.wastedMs ?? 0) })),
+      renderBlocking: det('render-blocking-resources').slice(0, 8).map((i: any) => ({ url: short(i.url), wastedMs: Math.round(i.wastedMs ?? 0) })),
+    };
+
+    const out: PsiResult = { ok: true, scores, metrics, audits, extra, warnings: lh.runWarnings ?? [] };
     cache.set(ck, out); console.log(`[psi] ${strategy} ok`); return out;
   } catch (e: any) {
     const detail = `${e?.name}: ${e?.message}${e?.cause?.code ? ` (${e.cause.code})` : ''}`;

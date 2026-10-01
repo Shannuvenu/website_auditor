@@ -1,1 +1,1 @@
-export default {};
+export default { experimental: { serverComponentsExternalPackages: ['playwright'] } };

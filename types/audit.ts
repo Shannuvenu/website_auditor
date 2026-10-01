@@ -8,5 +8,6 @@ export interface Metric { value: number | null; display: string; rating: 'good' 
 export interface PsiResult {
   ok: boolean; error?: string; scores?: Record<string, number | null>;
   metrics?: Record<string, Metric>; warnings?: string[]; audits?: PsiAudit[];
+  extra?: Record<string, unknown>;
 }
 export interface PsiAudit { id: string; title: string; description: string; score: number | null; mode: string; displayValue?: string; numericValue?: number; itemCount: number; items: string[]; category: string }

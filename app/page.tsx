@@ -1,8 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const STAGES = ['Fetching website', 'Running PageSpeed analysis', 'Checking SEO', 'Checking security', 'Analyzing resources', 'Generating recommendations'];
-const SHOW = ['Performance', 'Accessibility', 'Best Practices', 'Security', 'Technical SEO'];
+const STAGES = ['Fetching website', 'Running PageSpeed analysis', 'Checking security headers', 'Generating recommendations'];
+const SHOW = ['Performance', 'Accessibility', 'Best Practices', 'Security'];
+const SHOWN_SEV = ['critical', 'high', 'medium'];
+const SHOWN_STATUS = ['FAIL', 'WARNING', 'ERROR'];
 const SEV: Record<string, string> = { critical: 'bg-red-100 text-red-800', high: 'bg-orange-100 text-orange-800', medium: 'bg-yellow-100 text-yellow-800', low: 'bg-blue-100 text-blue-800', info: 'bg-slate-100 text-slate-700' };
 const RATING: Record<string, string> = { good: 'text-green-600', 'needs-improvement': 'text-orange-500', poor: 'text-red-600', unavailable: 'text-slate-400' };
 const RLABEL: Record<string, string> = { good: 'Good', 'needs-improvement': 'Needs Improvement', poor: 'Poor', unavailable: 'Unavailable' };
@@ -14,20 +16,23 @@ export default function Home() {
   const [stage, setStage] = useState(0);
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState('');
+  const [checkText, setCheckText] = useState('');
 
   useEffect(() => {
     if (!loading) return;
     setStage(0);
-    const t = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 9000);
+    const t = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 12000);
     return () => clearInterval(t);
   }, [loading]);
 
   async function run(e: React.FormEvent) {
     e.preventDefault(); setError(''); setData(null); setLoading(true);
     try {
-      const res = await fetch('/api/audit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url }) });
-      const j = await res.json();
-      if (!res.ok) throw new Error(j.error || 'Audit failed');
+      const res = await fetch('/api/audit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url, checkText }) });
+      const text = await res.text();
+      let j: any = null;
+      try { j = JSON.parse(text); } catch {}
+      if (!res.ok || !j) throw new Error(j?.error || `Server returned HTTP ${res.status} with an ${text ? 'invalid' : 'empty'} response. Check the terminal running npm run dev for the error.`);
       setData(j);
     } catch (err: any) { setError(err.message || 'Something went wrong'); }
     setLoading(false);
@@ -42,6 +47,7 @@ export default function Home() {
           <input value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://www.example.com/page" className="flex-1 rounded-lg border border-slate-300 px-4 py-3" required />
           <button disabled={loading} className="rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white disabled:opacity-60">{loading ? 'Analyzing…' : 'Analyze Website'}</button>
         </form>
+        <input value={checkText} onChange={(e) => setCheckText(e.target.value)} placeholder='Optional: text that must be in the server HTML, e.g. "1 Year Digital"' className="mx-auto mt-2 block w-full max-w-2xl rounded-lg border border-slate-300 px-4 py-2 text-sm" />
       </header>
 
       {error && <p className="mx-auto mt-6 max-w-2xl rounded-lg bg-red-50 p-4 text-red-700">{error}</p>}
@@ -60,7 +66,10 @@ export default function Home() {
 function Report({ d }: { d: any }) {
   const cats = Object.entries<any>(d.categories).filter(([n]) => SHOW.includes(n));
   const groups: Record<string, any[]> = {};
-  d.issues.filter((i: any) => SHOW.includes(i.category)).forEach((i: any) => (groups[i.category] ||= []).push(i));
+  d.issues
+    .filter((i: any) => SHOW.includes(i.category) && SHOWN_STATUS.includes(i.status) && SHOWN_SEV.includes(i.severity))
+    .forEach((i: any) => (groups[i.category] ||= []).push(i));
+  const ssr = d.issues.find((i: any) => i.id === 'ssr-check');
   const m = d.pagespeed.mobile, r = d.recommendations;
   return (
     <div className="mt-10 space-y-8">
@@ -70,12 +79,13 @@ function Report({ d }: { d: any }) {
           <div className="text-center"><div className={`text-5xl font-bold ${col(d.summary.overall)}`}>{d.summary.overall ?? '—'}</div><p className="text-xs text-slate-500">Website Health Score (our own)</p></div>
         </div>
         <div className="mt-4 flex flex-wrap gap-2 text-sm"><span className="rounded bg-slate-100 px-2 py-1">{d.summary.totalIssues} issues</span>
-          {(['critical', 'high', 'medium', 'low'] as const).map((s) => <span key={s} className={`rounded px-2 py-1 ${SEV[s]}`}>{d.summary.severity[s]} {s}</span>)}</div>
+          {(['critical', 'high', 'medium'] as const).map((s) => <span key={s} className={`rounded px-2 py-1 ${SEV[s]}`}>{d.summary.severity[s]} {s}</span>)}</div>
+        {ssr && <p className={`mt-3 text-sm ${ssr.status === 'PASS' ? 'text-green-700' : 'text-red-700'}`}>{ssr.title}: {ssr.status === 'PASS' ? 'found in the initial server HTML.' : ssr.evidence}</p>}
         {!m.ok && <p className="mt-3 text-sm text-orange-700">PageSpeed (mobile): audit incomplete — {m.error}</p>}
         {!d.pagespeed.desktop.ok && <p className="mt-1 text-sm text-orange-700">PageSpeed (desktop): audit incomplete — {d.pagespeed.desktop.error}</p>}
       </section>
 
-      <section className="grid grid-cols-2 gap-3 md:grid-cols-5">
+      <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {cats.map(([n, c]) => (
           <div key={n} className="rounded-xl border bg-white p-4"><p className="text-sm font-medium">{n}</p>
             <p className={`text-3xl font-bold ${col(c.score)}`}>{c.score ?? 'N/A'}</p>
@@ -102,20 +112,30 @@ function Report({ d }: { d: any }) {
             </div>); })}
         </div></section>
 
-      <section><h2 className="mb-3 text-xl font-semibold">Expert Analysis <span className="text-sm font-normal text-slate-500">(AI interpretation of verified data)</span></h2>
+      <section><h2 className="mb-3 text-xl font-semibold">Top 5 Issues <span className="text-sm font-normal text-slate-500">(AI-ranked, evidence from verified findings)</span></h2>
         {!r.available ? <p className="rounded-xl border bg-white p-4 text-slate-600">{r.reason}</p> : (
-          <div className="space-y-4 rounded-xl border bg-white p-6">
-            <p>{r.summary}</p>
-            {r.biggestIssues?.length > 0 && <div><h3 className="font-semibold">Biggest issues</h3><ul className="list-disc pl-5">{r.biggestIssues.map((x: string, i: number) => <li key={i}>{x}</li>)}</ul></div>}
-            {r.highestImpactFixes?.length > 0 && <div><h3 className="font-semibold">Highest impact fixes</h3>{r.highestImpactFixes.map((f: any, i: number) => <div key={i} className="mt-2 rounded bg-slate-50 p-3"><p className="font-medium">{f.title}</p><p className="text-xs text-slate-500">Evidence: {f.evidence}</p><p className="text-xs text-slate-400">Based on findings: {f.findingIds?.join(', ')}</p><ol className="list-decimal pl-5 text-sm">{f.steps?.map((s: string, j: number) => <li key={j}>{s}</li>)}</ol></div>)}</div>}
-            {r.categoryAnalysis?.length > 0 && <div><h3 className="font-semibold">Category analysis</h3>{r.categoryAnalysis.map((c: any, i: number) => <p key={i} className="text-sm"><b>{c.category}:</b> {c.analysis}</p>)}</div>}
+          <div className="space-y-3">
+            {r.summary && <p className="rounded-xl border bg-white p-4">{r.summary}</p>}
+            {r.topIssues?.length === 0 && <p className="rounded-xl border bg-white p-4 text-slate-600">No major issues to report.</p>}
+            {r.topIssues?.map((t: any) => (
+              <div key={t.rank} className="rounded-xl border bg-white p-4">
+                <p className="font-semibold">#{t.rank} {t.title}</p>
+                <p className="mt-1 text-sm text-slate-600">{t.whyItMatters}</p>
+                <div className="mt-2 rounded bg-slate-50 p-3 text-xs">
+                  <p className="font-medium text-slate-700">Verified evidence</p>
+                  <ul className="mt-1 list-disc space-y-1 pl-4 text-slate-600">{t.evidence.map((e: any) => <li key={e.id}><b>{e.title}:</b> {e.text}</li>)}</ul>
+                </div>
+                <p className="mt-2 text-sm font-medium">How to fix</p>
+                <ol className="list-decimal pl-5 text-sm">{t.fixSteps.map((s: string, j: number) => <li key={j}>{s}</li>)}</ol>
+              </div>))}
           </div>)}
       </section>
 
-      <section><h2 className="mb-3 text-xl font-semibold">Detailed Results</h2>
+      <section><h2 className="mb-3 text-xl font-semibold">Detailed Results <span className="text-sm font-normal text-slate-500">(critical, high and medium issues only)</span></h2>
+        {Object.keys(groups).length === 0 && <p className="rounded-xl border bg-white p-4 text-slate-600">No critical, high or medium issues found.</p>}
         <div className="space-y-2">{Object.entries(groups).map(([cat, items]) => (
           <details key={cat} className="rounded-xl border bg-white" open={items.some((i) => i.status === 'FAIL')}>
-            <summary className="cursor-pointer p-4 font-medium">{cat} <span className="text-sm text-slate-500">({items.length} checks)</span></summary>
+            <summary className="cursor-pointer p-4 font-medium">{cat} <span className="text-sm text-slate-500">({items.length} issues)</span></summary>
             <div className="divide-y border-t">{items.map((i) => (
               <div key={i.id} className="p-4 text-sm">
                 <div className="flex flex-wrap items-center gap-2"><span className={`rounded px-2 py-0.5 text-xs font-semibold uppercase ${SEV[i.severity]}`}>{i.severity}</span><b>{i.title}</b><span className="text-xs text-slate-500">{i.status} · {i.source === 'pagespeed' ? 'PageSpeed' : 'Crawler'}</span></div>
@@ -124,10 +144,6 @@ function Report({ d }: { d: any }) {
                 {i.recommendation && <p className="mt-1"><span className="font-medium">Recommended fix:</span> {i.recommendation}</p>}
               </div>))}</div>
           </details>))}</div></section>
-
-      {r.available && r.priorities && <section><h2 className="mb-3 text-xl font-semibold">Recommended Priorities</h2>
-        <div className="grid gap-3 md:grid-cols-3">{([['Short-term', 'shortTerm'], ['Medium-term', 'mediumTerm'], ['Ongoing', 'ongoing']] as const).map(([l, k]) => (
-          <div key={k} className="rounded-xl border bg-white p-4"><h3 className="font-semibold">{l}</h3><ul className="mt-2 list-disc pl-5 text-sm">{(r.priorities[k] ?? []).map((x: string, i: number) => <li key={i}>{x}</li>)}</ul></div>))}</div></section>}
     </div>
   );
 }
