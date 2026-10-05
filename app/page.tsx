@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import type { FormEvent } from 'react';
 
 const STAGES = ['Fetching website', 'Running PageSpeed analysis', 'Checking security headers', 'Generating recommendations'];
 const SHOW = ['Performance', 'Accessibility', 'Best Practices', 'Security'];
@@ -33,7 +34,7 @@ export default function Home() {
       let j: any = null;
       try { j = JSON.parse(text); } catch {}
       if (!res.ok || !j) throw new Error(j?.error || `Server returned HTTP ${res.status} with an ${text ? 'invalid' : 'empty'} response. Check the terminal running npm run dev for the error.`);
-      setData(j);
+      setData({ ...j, _checkText: checkText });
     } catch (err: any) { setError(err.message || 'Something went wrong'); }
     setLoading(false);
   }
@@ -71,12 +72,12 @@ function Report({ d }: { d: any }) {
     .forEach((i: any) => (groups[i.category] ||= []).push(i));
   const ssr = d.issues.find((i: any) => i.id === 'ssr-check');
   const m = d.pagespeed.mobile, r = d.recommendations;
+  const runs = m.extra?.runs;
   return (
     <div className="mt-10 space-y-8">
       <section className="rounded-xl border bg-white p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0"><p className="break-all font-medium">{d.finalUrl || d.url}</p><p className="text-sm text-slate-500">{new Date(d.timestamp).toLocaleString()}{d.cached && ' · cached result'}</p></div>
-          <div className="text-center"><div className={`text-5xl font-bold ${col(d.summary.overall)}`}>{d.summary.overall ?? '—'}</div><p className="text-xs text-slate-500">Website Health Score (our own)</p></div>
         </div>
         <div className="mt-4 flex flex-wrap gap-2 text-sm"><span className="rounded bg-slate-100 px-2 py-1">{d.summary.totalIssues} issues</span>
           {(['critical', 'high', 'medium'] as const).map((s) => <span key={s} className={`rounded px-2 py-1 ${SEV[s]}`}>{d.summary.severity[s]} {s}</span>)}</div>
@@ -88,7 +89,7 @@ function Report({ d }: { d: any }) {
       <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {cats.map(([n, c]) => (
           <div key={n} className="rounded-xl border bg-white p-4"><p className="text-sm font-medium">{n}</p>
-            <p className={`text-3xl font-bold ${col(c.score)}`}>{c.score ?? 'N/A'}</p>
+            <p className={`text-3xl font-bold ${c.source?.startsWith('Own') ? 'text-slate-400' : col(c.score)}`}>{c.source?.startsWith('Own') ? '—' : c.score ?? 'N/A'}</p>
             <p className="text-xs text-slate-500">{c.issues} issue(s)</p><p className="mt-1 text-[11px] text-slate-400">{c.source}</p></div>
         ))}
       </section>
@@ -98,7 +99,14 @@ function Report({ d }: { d: any }) {
           {(['lcp', 'inp', 'cls', 'fcp', 'ttfb'] as const).map((k) => { const x = m.metrics?.[k] ?? { display: 'Data unavailable', rating: 'unavailable' };
             return <div key={k} className="rounded-xl border bg-white p-4"><p className="text-xs font-semibold uppercase text-slate-500">{k}</p><p className="text-lg font-bold">{x.display}</p><p className={`text-sm ${RATING[x.rating]}`}>{RLABEL[x.rating]}</p></div>; })}
         </div>
-        <p className="mt-2 text-xs text-slate-500">INP is only available from real-user field data when Google has enough traffic for this URL.</p></section>
+        <p className="mt-2 text-xs text-slate-500">INP is only available from real-user field data when Google has enough traffic for this URL.</p>
+        {runs && (
+          <p className="mt-1 text-xs text-slate-500">
+            Lab values are from the median of {runs.succeeded}/{runs.requested} PageSpeed runs. Performance scores across runs: {runs.perfScores.join(', ')}
+            {runs.lcpMsMin != null && runs.lcpMsMax != null && ` · LCP range ${(runs.lcpMsMin / 1000).toFixed(2)}–${(runs.lcpMsMax / 1000).toFixed(2)} s`}.
+          </p>
+        )}
+      </section>
 
       <section><h2 className="mb-3 text-xl font-semibold">PageSpeed Insights <span className="text-sm font-normal text-slate-500">(Google Lighthouse)</span></h2>
         <div className="grid gap-3 md:grid-cols-2">
@@ -112,7 +120,8 @@ function Report({ d }: { d: any }) {
             </div>); })}
         </div></section>
 
-      <section><h2 className="mb-3 text-xl font-semibold">Top 5 Issues <span className="text-sm font-normal text-slate-500">(AI-ranked, evidence from verified findings)</span></h2>
+      <section><h2 className="mb-3 text-xl font-semibold">Top 5 Issues <span className="text-sm font-normal text-slate-500">(AI-ranked root causes, evidence from verified findings)</span></h2>
+        <p className="mb-2 text-xs text-slate-500">Automated checks catch only a minority of accessibility problems. A high accessibility score does not mean the page is accessible.</p>
         {!r.available ? <p className="rounded-xl border bg-white p-4 text-slate-600">{r.reason}</p> : (
           <div className="space-y-3">
             {r.summary && <p className="rounded-xl border bg-white p-4">{r.summary}</p>}
@@ -121,15 +130,27 @@ function Report({ d }: { d: any }) {
               <div key={t.rank} className="rounded-xl border bg-white p-4">
                 <p className="font-semibold">#{t.rank} {t.title}</p>
                 <p className="mt-1 text-sm text-slate-600">{t.whyItMatters}</p>
+                <p className="mt-1 text-sm"><span className="font-medium">Root cause:</span> {t.rootCause}</p>
+                <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                  <span className="rounded bg-slate-100 px-2 py-1">Effort: {t.effort}</span>
+                  <span className="rounded bg-slate-100 px-2 py-1">Business risk: {t.businessRisk}</span>
+                  <span className="rounded bg-slate-100 px-2 py-1">Evidence strength: {t.confidence}</span>
+                  <span className="rounded bg-slate-100 px-2 py-1">Affected: {t.affected}</span>
+                </div>
+                {t.unverified?.length > 0 && <p className="mt-2 rounded bg-amber-50 p-2 text-xs text-amber-800">⚠ Not found in the evidence, verify before using: {t.unverified.join(', ')}</p>}
                 <div className="mt-2 rounded bg-slate-50 p-3 text-xs">
                   <p className="font-medium text-slate-700">Verified evidence</p>
                   <ul className="mt-1 list-disc space-y-1 pl-4 text-slate-600">{t.evidence.map((e: any) => <li key={e.id}><b>{e.title}:</b> {e.text}</li>)}</ul>
                 </div>
                 <p className="mt-2 text-sm font-medium">How to fix</p>
                 <ol className="list-decimal pl-5 text-sm">{t.fixSteps.map((s: string, j: number) => <li key={j}>{s}</li>)}</ol>
+                <p className="mt-2 text-xs text-slate-600"><b>Where to fix:</b> {t.fixLocation}</p>
+                <p className="mt-1 text-xs text-slate-600"><b>Risk note:</b> {t.riskNote}</p>
               </div>))}
           </div>)}
       </section>
+
+      <Chat d={d} />
 
       <section><h2 className="mb-3 text-xl font-semibold">Detailed Results <span className="text-sm font-normal text-slate-500">(critical, high and medium issues only)</span></h2>
         {Object.keys(groups).length === 0 && <p className="rounded-xl border bg-white p-4 text-slate-600">No critical, high or medium issues found.</p>}
@@ -145,5 +166,104 @@ function Report({ d }: { d: any }) {
               </div>))}</div>
           </details>))}</div></section>
     </div>
+  );
+}
+
+function Chat({ d }: { d: any }) {
+  const [q, setQ] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [log, setLog] = useState<{ q: string; a: string; ids: string[]; bad: string[] }[]>([]);
+
+  async function ask(e: FormEvent) {
+    e.preventDefault();
+    const question = q.trim();
+    if (!question || busy) return;
+
+    setBusy(true);
+    setQ('');
+
+    try {
+      const res = await fetch('/api/audit', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          url: d.url,
+          checkText: d._checkText ?? '',
+          question,
+        }),
+      });
+
+      const j = await res.json();
+
+      setLog((l) => [
+        ...l,
+        {
+          q: question,
+          a: res.ok ? j.answer : j.error || 'Request failed',
+          ids: res.ok ? j.findingIds ?? [] : [],
+          bad: res.ok ? j.unverified ?? [] : [],
+        },
+      ]);
+    } catch (err: any) {
+      setLog((l) => [
+        ...l,
+        {
+          q: question,
+          a: err.message || 'Request failed',
+          ids: [],
+          bad: [],
+        },
+      ]);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <section>
+      <h2 className="mb-3 text-xl font-semibold">
+        Ask about this report{' '}
+        <span className="text-sm font-normal text-slate-500">
+          (answers only from the evidence above)
+        </span>
+      </h2>
+
+      <div className="space-y-3">
+        {log.map((x, i) => (
+          <div key={i} className="rounded-xl border bg-white p-4 text-sm">
+            <p className="font-medium">Q: {x.q}</p>
+            <p className="mt-1 whitespace-pre-wrap">{x.a}</p>
+
+            {x.ids.length > 0 && (
+              <p className="mt-1 text-xs text-slate-500">
+                Evidence: {x.ids.join(', ')}
+              </p>
+            )}
+
+            {x.bad.length > 0 && (
+              <p className="mt-2 rounded bg-amber-50 p-2 text-xs text-amber-800">
+                ⚠ Not found in the report, verify: {x.bad.join(', ')}
+              </p>
+            )}
+          </div>
+        ))}
+
+        <form onSubmit={ask} className="flex gap-2">
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="e.g. Why is LCP poor on mobile?"
+            className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm"
+          />
+          <button
+            type="submit"
+            disabled={busy}
+            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white disabled:opacity-60"
+          >
+            {busy ? 'Thinking…' : 'Ask'}
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }

@@ -6,7 +6,7 @@ import { renderPage, type RenderFacts } from '@/lib/crawler/render';
 import { crawlerChecks, psiFindings } from '@/lib/audits/checks';
 import { extraFindings } from '@/lib/audits/extra';
 import { scoreAll } from '@/lib/scoring/score';
-import { generateRecommendations } from '@/lib/recommendations/engine';
+import { generateRecommendations, answerQuestion } from '@/lib/recommendations/engine';
 import { cache } from '@/lib/cache/memory';
 
 export const runtime = 'nodejs';
@@ -21,14 +21,21 @@ async function handle(req: Request) {
 
   let url: URL;
   let checkText = '';
+  let question = '';
   try {
     const b = await req.json();
     url = await assertSafeUrl(String(b.url ?? ''));
     checkText = String(b.checkText ?? '').trim().slice(0, 120);
+    question = String(b.question ?? '').trim().slice(0, 500);
   } catch (e: any) { return NextResponse.json({ error: e.message || 'Invalid request' }, { status: 400 }); }
 
   const ck = `audit:v3:${url.href}:${checkText}:${process.env.ENABLE_PLAYWRIGHT === 'true'}`;
-  const cached = cache.get<any>(ck); if (cached) return NextResponse.json({ ...cached, cached: true });
+  const cached = cache.get<any>(ck);
+  if (question) {
+    if (!cached) return NextResponse.json({ error: 'No cached report for this URL (only fully successful audits are kept for 30 minutes). Run the audit again.' }, { status: 404 });
+    return NextResponse.json(await answerQuestion(question, cached));
+  }
+  if (cached) return NextResponse.json({ ...cached, cached: true });
   const t0 = Date.now(); console.log(`[audit] start ${url.href}`);
   let crawlErr: string | null = null;
   const [mobile, desktop, facts, render] = await Promise.all([

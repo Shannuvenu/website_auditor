@@ -8,14 +8,16 @@ const rate = (k: string, v: number | null | undefined): Metric['rating'] =>
 const mk = (k: string, v: number | null | undefined, unit: 'ms' | 'cls'): Metric =>
   v == null ? { value: null, display: 'Data unavailable', rating: 'unavailable' } : { value: v, display: unit === 'cls' ? v.toFixed(3) : `${(v / 1000).toFixed(2)} s`, rating: rate(k, v) };
 
-export async function runPsi(url: string, strategy: 'mobile' | 'desktop'): Promise<PsiResult> {
+const RUNS = Math.max(1, Math.min(5, Number(process.env.PSI_RUNS) || 3));
+
+async function runPsiOnce(url: string, strategy: 'mobile' | 'desktop', run: number): Promise<PsiResult> {
   const key = process.env.PAGESPEED_API_KEY;
   if (!key) return { ok: false, error: 'PAGESPEED_API_KEY is not configured on the server.' };
-  const ck = `psi:${strategy}:${url}:${CATS.join(',')}:v2`;
+  const ck = `psi:${strategy}:${url}:${CATS.join(',')}:v2:r${run}`;
   const hit = cache.get<PsiResult>(ck); if (hit) return hit;
   const p = new URLSearchParams({ url, strategy, key }); CATS.forEach((c) => p.append('category', c));
   try {
-    const res = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${p}`, { signal: AbortSignal.timeout(100_000) });
+    const res = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${p}`, { signal: AbortSignal.timeout(170_000) });
     if (!res.ok) {
       const msg = res.status === 429 ? 'PageSpeed API quota exceeded. Try again later.' : res.status === 400 ? 'PageSpeed could not analyze this URL (unreachable or invalid).' : `PageSpeed API error (HTTP ${res.status}).`;
       console.log(`[psi] ${strategy} failed status=${res.status}`); return { ok: false, error: msg };
@@ -62,13 +64,48 @@ export async function runPsi(url: string, strategy: 'mobile' | 'desktop'): Promi
       imageIssues: ['uses-responsive-images', 'modern-image-formats', 'offscreen-images', 'uses-optimized-images'].flatMap((id) => det(id).slice(0, 6).map((i: any) => ({ audit: id, url: short(i.url), wastedKB: Math.round((i.wastedBytes ?? 0) / 1024) }))),
       fonts: det('font-display').slice(0, 6).map((i: any) => ({ url: short(i.url), wastedMs: Math.round(i.wastedMs ?? 0) })),
       renderBlocking: det('render-blocking-resources').slice(0, 8).map((i: any) => ({ url: short(i.url), wastedMs: Math.round(i.wastedMs ?? 0) })),
+      unusedJs: det('unused-javascript').slice(0, 8).map((i: any) => ({ url: short(i.url), wastedKB: Math.round((i.wastedBytes ?? 0) / 1024) })),
+      longTasks: det('long-tasks').slice(0, 8).map((i: any) => ({ url: short(i.url), durationMs: Math.round(i.duration ?? 0) })),
+      layoutShifts: det('layout-shift-elements').slice(0, 5).map((i: any) => ({ snippet: short(i.node?.snippet), score: Number((i.score ?? 0).toFixed(3)) })),
+      // Real-user (CrUX) data from the same PSI response. CLS percentile comes back multiplied by 100.
+      field: {
+        category: j.loadingExperience?.overall_category ?? null,
+        originFallback: j.loadingExperience?.origin_fallback ?? false,
+        lcpMs: field.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? null,
+        cls: field.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile != null ? field.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile / 100 : null,
+        inpMs: field.INTERACTION_TO_NEXT_PAINT?.percentile ?? null,
+      },
     };
 
     const out: PsiResult = { ok: true, scores, metrics, audits, extra, warnings: lh.runWarnings ?? [] };
-    cache.set(ck, out); console.log(`[psi] ${strategy} ok`); return out;
+    cache.set(ck, out); console.log(`[psi] ${strategy} run ${run} ok`); return out;
   } catch (e: any) {
     const detail = `${e?.name}: ${e?.message}${e?.cause?.code ? ` (${e.cause.code})` : ''}`;
     console.log(`[psi] ${strategy} error ${detail}`);
     return { ok: false, error: e?.name === 'TimeoutError' ? 'PageSpeed request timed out.' : `PageSpeed request failed — ${detail}` };
   }
+}
+
+// Runs PSI RUNS times and returns the median run (by performance score) plus run-to-run variance info.
+export async function runPsi(url: string, strategy: 'mobile' | 'desktop'): Promise<PsiResult> {
+  const ck = `psi-med:${strategy}:${url}:${RUNS}:v1`;
+  const hit = cache.get<PsiResult>(ck); if (hit) return hit;
+  const all = await Promise.all(Array.from({ length: RUNS }, (_, i) => runPsiOnce(url, strategy, i)));
+  const good = all.filter((r) => r.ok).sort((a, b) => (a.scores?.performance ?? 0) - (b.scores?.performance ?? 0));
+  if (!good.length) return all[0];
+  const med = good[Math.floor((good.length - 1) / 2)];
+  const lcps = good.map((r) => r.metrics?.lcp.value).filter((v): v is number => v != null);
+  const out: PsiResult = {
+    ...med,
+    extra: {
+      ...med.extra,
+      runs: {
+        requested: RUNS, succeeded: good.length, perfScores: good.map((r) => r.scores?.performance ?? null),
+        lcpMsMin: lcps.length ? Math.min(...lcps) : null, lcpMsMax: lcps.length ? Math.max(...lcps) : null,
+      },
+    },
+  };
+  console.log(`[psi] ${strategy} median of ${good.length}:`, out.extra!.runs);
+  if (good.length === RUNS) cache.set(ck, out);
+  return out;
 }
