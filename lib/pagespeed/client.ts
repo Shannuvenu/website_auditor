@@ -1,7 +1,7 @@
 import { cache } from '@/lib/cache/memory';
 import type { PsiResult, Metric } from '@/types/audit';
 
-const CATS = ['performance', 'accessibility', 'best-practices', 'seo'];
+const CATS = ['performance', 'accessibility', 'best-practices'];
 const LIMITS: Record<string, [number, number]> = { lcp: [2500, 4000], cls: [0.1, 0.25], fcp: [1800, 3000], inp: [200, 500], ttfb: [800, 1800], tbt: [200, 600], si: [3400, 5800] };
 const rate = (k: string, v: number | null | undefined): Metric['rating'] =>
   v == null ? 'unavailable' : v <= LIMITS[k][0] ? 'good' : v <= LIMITS[k][1] ? 'needs-improvement' : 'poor';

@@ -114,7 +114,7 @@ function Report({ d }: { d: any }) {
             <div key={st} className="rounded-xl border bg-white p-4">
               <h3 className="mb-2 font-semibold capitalize">{st}</h3>
               {!p.ok ? <p className="text-sm text-orange-700">Audit incomplete — {p.error}</p> : (<>
-                <div className="grid grid-cols-4 gap-2 text-center">{Object.entries(p.scores).map(([k, v]) => <div key={k}><div className={`text-2xl font-bold ${col(v as number | null)}`}>{(v as number | null) ?? 'N/A'}</div><div className="text-[11px] text-slate-500">{k}</div></div>)}</div>
+                <div className="grid grid-cols-3 gap-2 text-center">{Object.entries(p.scores).filter(([k]) => k !== 'seo').map(([k, v]) => <div key={k}><div className={`text-2xl font-bold ${col(v as number | null)}`}>{(v as number | null) ?? 'N/A'}</div><div className="text-[11px] text-slate-500">{k}</div></div>)}</div>
                 <div className="mt-3 grid grid-cols-3 gap-2 text-sm">{(['fcp', 'lcp', 'tbt', 'cls', 'si', 'ttfb'] as const).map((k) => { const x = p.metrics[k]; return <div key={k}><span className="text-xs uppercase text-slate-500">{k}</span><div className={RATING[x.rating]}>{x.display}</div></div>; })}</div>
               </>)}
             </div>); })}
