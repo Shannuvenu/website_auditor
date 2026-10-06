@@ -72,6 +72,19 @@ const hostOf = (u: unknown) => { try { return new URL(String(u)).hostname.replac
 const norm = (s: string) => s.replace(/(\d),(?=\d{3})/g, '$1'); // "1,503 KiB" -> "1503 KiB"
 const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
+// ---- Input budget: free-tier models reject big prompts (Groq: HTTP 413, ~8000 tokens/min). Evidence is shrunk until it fits. ----
+const MAX_IN = Math.max(4000, Number(process.env.AI_MAX_INPUT_CHARS) || 12000);
+type Level = { c: number; e: number; a: number; cr: boolean }; // candidates, evidence chars, array items, include crawler
+const LEVELS: Level[] = [{ c: 40, e: 500, a: 8, cr: true }, { c: 25, e: 300, a: 6, cr: true }, { c: 15, e: 200, a: 4, cr: true }, { c: 10, e: 140, a: 3, cr: false }];
+const clip = (s: unknown, n: number) => { const t = String(s ?? ''); return t.length > n ? `${t.slice(0, n - 1)}…` : t; };
+const trimArrays = (o: any, n: number): any => (o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, Array.isArray(v) ? v.slice(0, n) : v])) : o);
+const friendlyErr = (e: any) => {
+  const msg = String(e?.message ?? e);
+  if (/413|too large/i.test(msg)) return "The report is too large for this model's per-request token limit. Lower AI_MAX_INPUT_CHARS or use a model/plan with a higher limit.";
+  if (/429|rate limit/i.test(msg)) return 'Model rate limit reached (tokens per minute). Wait a minute and try again.';
+  return msg.slice(0, 200);
+};
+
 // ---- Grounding checks: flag claims in LLM text that do not appear in the evidence ----
 // numbers with units that are NOT in the evidence (catches "1.5 GiB" when evidence says "1,503 KiB")
 export function ungroundedNumbers(text: string, ev: string): string[] {
@@ -101,14 +114,19 @@ export async function generateRecommendations(url: string, crawl: CrawlFacts | n
   if (!llm) return { available: false, reason: 'No AI provider configured. Showing verified findings only.' };
   const cand = findings.filter(isCandidate).sort((a, b) => RANK[a.severity] - RANK[b.severity]).slice(0, 40);
   if (!cand.length) return { available: true, summary: 'No failing or warning checks were found in the reported categories.', topIssues: [] };
-  const byId = new Map(cand.map((f) => [f.id, f]));
-  const evidence = {
-    url, siteHost: hostOf(url), crawler: crawl ? { ...crawl, http: { ...crawl.http, headers: undefined }, images: { ...crawl.images, sample: undefined } } : 'unavailable',
+  // Build the evidence at the richest level that fits the model's input budget
+  const makeEvidence = (L: Level) => ({
+    url, siteHost: hostOf(url),
+    crawler: crawl ? (L.cr ? { ...crawl, http: { ...crawl.http, headers: undefined }, images: { ...crawl.images, sample: undefined } } : 'omitted to fit the input limit') : 'unavailable',
     render: render?.ok ? { words: render.words, checkTextFoundMs: render.checkTextFoundMs, totalRequests: render.totalRequests, adLikeHosts: render.adLikeHosts, gtmRequests: render.gtmRequests, sessionLike: render.sessionLike, thirdPartyHosts: render.thirdPartyHosts } : null,
-    pagespeed: { mobile: mobile.ok ? { scores: mobile.scores, metrics: mobile.metrics, extra: mobile.extra } : { error: mobile.error }, desktop: desktop.ok ? { scores: desktop.scores } : { error: desktop.error } },
-    candidates: cand.map(({ id, category, title, status, severity, evidence }) => ({ id, category, title, status, severity, evidence })),
-  };
-  const evJson = JSON.stringify(evidence), ev = norm(evJson);
+    pagespeed: { mobile: mobile.ok ? { scores: mobile.scores, metrics: mobile.metrics, extra: trimArrays(mobile.extra, L.a) } : { error: mobile.error }, desktop: desktop.ok ? { scores: desktop.scores } : { error: desktop.error } },
+    candidates: cand.slice(0, L.c).map(({ id, category, title, status, severity, evidence }) => ({ id, category, title, status, severity, evidence: clip(evidence, L.e) })),
+  });
+  let level = LEVELS[0], evidence = makeEvidence(level), evJson = JSON.stringify(evidence);
+  for (const L of LEVELS) { level = L; evidence = makeEvidence(L); evJson = JSON.stringify(evidence); if (evJson.length <= MAX_IN) break; }
+  const ev = norm(evJson);
+  const byId = new Map(cand.slice(0, level.c).map((f) => [f.id, f])); // the model may only cite candidates it was actually shown
+  console.log(`[ai] evidence ${evJson.length} chars, ${byId.size} candidates (limit ${MAX_IN})`);
   let lastErr = 'unknown error';
   let best: { rec: Recommendations; bad: number } | null = null;
   let feedback = '';
@@ -162,7 +180,7 @@ export async function generateRecommendations(url: string, crawl: CrawlFacts | n
     } catch (e: any) { lastErr = String(e?.message ?? e); console.log('[ai] attempt', attempt + 1, 'failed', lastErr); }
   }
   if (best) return best.rec;
-  return { available: false, reason: `AI analysis failed: ${lastErr}. Showing verified findings only.` };
+  return { available: false, reason: `AI analysis failed: ${friendlyErr(lastErr)} Showing verified findings only.` };
 }
 
 export interface ChatAnswer { answer: string; findingIds: string[]; unverified: string[] }
@@ -172,20 +190,23 @@ export async function answerQuestion(question: string, d: any): Promise<ChatAnsw
   const llm = getProvider();
   if (!llm) return { answer: 'No AI provider configured.', findingIds: [], unverified: [] };
   const cand: Finding[] = (Array.isArray(d?.issues) ? d.issues : []).filter(isCandidate).sort((a: Finding, b: Finding) => RANK[a.severity] - RANK[b.severity]).slice(0, 40);
-  const ids = new Set(cand.map((f) => f.id));
   const m = d?.pagespeed?.mobile, k = d?.pagespeed?.desktop, r = d?.render;
-  const ctx = {
+  const topIssues = (Array.isArray(d?.recommendations?.topIssues) ? d.recommendations.topIssues : []).map((t: TopIssue) => ({ rank: t.rank, title: clip(t.title, 120), rootCause: clip(t.rootCause, 220), findingIds: t.findingIds, fix: clip(t.fix, 160) }));
+  const makeCtx = (L: Level) => ({
     url: d?.url, siteHost: hostOf(d?.url),
-    pagespeed: { mobile: m?.ok ? { scores: m.scores, metrics: m.metrics, extra: m.extra } : { error: m?.error }, desktop: k?.ok ? { scores: k.scores, metrics: k.metrics } : { error: k?.error } },
+    pagespeed: { mobile: m?.ok ? { scores: m.scores, metrics: m.metrics, extra: trimArrays(m.extra, L.a) } : { error: m?.error }, desktop: k?.ok ? { scores: k.scores, metrics: k.metrics } : { error: k?.error } },
     render: r?.ok ? { totalRequests: r.totalRequests, adLikeHosts: r.adLikeHosts, gtmRequests: r.gtmRequests, thirdPartyHosts: r.thirdPartyHosts } : null,
-    candidates: cand.map(({ id, category, title, status, severity, evidence }) => ({ id, category, title, status, severity, evidence })),
-    topIssues: (Array.isArray(d?.recommendations?.topIssues) ? d.recommendations.topIssues : []).map((t: TopIssue) => ({ rank: t.rank, title: t.title, rootCause: t.rootCause, findingIds: t.findingIds, fix: t.fix })),
-  };
-  const ctxJson = JSON.stringify(ctx);
+    candidates: cand.slice(0, L.c).map(({ id, category, title, status, severity, evidence }) => ({ id, category, title, status, severity, evidence: clip(evidence, L.e) })),
+    topIssues,
+  });
+  let level = LEVELS[0], ctx = makeCtx(level), ctxJson = JSON.stringify(ctx);
+  for (const L of LEVELS) { level = L; ctx = makeCtx(L); ctxJson = JSON.stringify(ctx); if (ctxJson.length <= MAX_IN) break; }
+  const ids = new Set(cand.slice(0, level.c).map((f) => f.id));
+  console.log(`[ai] chat context ${ctxJson.length} chars (limit ${MAX_IN})`);
   try {
     const raw = await llm.complete(CHAT_SYSTEM, `REPORT:\n${ctxJson}\n\nQUESTION: ${question}`);
     const p = JSON.parse(raw.replace(/^```(?:json)?|```$/gm, '').trim());
     const answer = String(p.answer ?? '').slice(0, 1200);
     return { answer, findingIds: [...new Set(arr(p.findingIds))].filter((id) => ids.has(id)), unverified: checkClaims(answer, norm(ctxJson)) };
-  } catch (e: any) { return { answer: `Could not answer: ${String(e?.message ?? e).slice(0, 200)}`, findingIds: [], unverified: [] }; }
+  } catch (e: any) { return { answer: `Could not answer: ${friendlyErr(e)}`, findingIds: [], unverified: [] }; }
 }

@@ -22,18 +22,21 @@ async function handle(req: Request) {
   let url: URL;
   let checkText = '';
   let question = '';
+  let report: any = null;
   try {
     const b = await req.json();
     url = await assertSafeUrl(String(b.url ?? ''));
     checkText = String(b.checkText ?? '').trim().slice(0, 120);
     question = String(b.question ?? '').trim().slice(0, 500);
+    report = b.report ?? null;
   } catch (e: any) { return NextResponse.json({ error: e.message || 'Invalid request' }, { status: 400 }); }
 
   const ck = `audit:v3:${url.href}:${checkText}:${process.env.ENABLE_PLAYWRIGHT === 'true'}`;
   const cached = cache.get<any>(ck);
   if (question) {
-    if (!cached) return NextResponse.json({ error: 'No cached report for this URL (only fully successful audits are kept for 30 minutes). Run the audit again.' }, { status: 404 });
-    return NextResponse.json(await answerQuestion(question, cached));
+    const src = cached ?? report;
+    if (!src) return NextResponse.json({ error: 'No report available. Run the audit again.' }, { status: 404 });
+    return NextResponse.json(await answerQuestion(question, src));
   }
   if (cached) return NextResponse.json({ ...cached, cached: true });
   const t0 = Date.now(); console.log(`[audit] start ${url.href}`);

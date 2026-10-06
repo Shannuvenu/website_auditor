@@ -26,7 +26,7 @@ export default function Home() {
     return () => clearInterval(t);
   }, [loading]);
 
-  async function run(e: React.FormEvent) {
+  async function run(e: FormEvent) {
     e.preventDefault(); setError(''); setData(null); setLoading(true);
     try {
       const res = await fetch('/api/audit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url, checkText }) });
@@ -34,7 +34,7 @@ export default function Home() {
       let j: any = null;
       try { j = JSON.parse(text); } catch {}
       if (!res.ok || !j) throw new Error(j?.error || `Server returned HTTP ${res.status} with an ${text ? 'invalid' : 'empty'} response. Check the terminal running npm run dev for the error.`);
-      setData({ ...j, _checkText: checkText });
+      setData({ ...j, _checkText: checkText }); // _checkText lets the follow-up chat find the cached report
     } catch (err: any) { setError(err.message || 'Something went wrong'); }
     setLoading(false);
   }
@@ -169,6 +169,7 @@ function Report({ d }: { d: any }) {
   );
 }
 
+// Grounded follow-up chat. It sends a slim copy of the report so it also works on serverless hosting (no shared in-memory cache).
 function Chat({ d }: { d: any }) {
   const [q, setQ] = useState('');
   const [busy, setBusy] = useState(false);
@@ -178,42 +179,26 @@ function Chat({ d }: { d: any }) {
     e.preventDefault();
     const question = q.trim();
     if (!question || busy) return;
-
     setBusy(true);
     setQ('');
-
     try {
+      const slim = (p: any) => ({ ok: p?.ok, error: p?.error, scores: p?.scores, metrics: p?.metrics, extra: p?.extra });
+      const report = {
+        url: d.url,
+        issues: d.issues,
+        pagespeed: { mobile: slim(d.pagespeed.mobile), desktop: slim(d.pagespeed.desktop) },
+        render: d.render?.ok ? { ok: true, totalRequests: d.render.totalRequests, adLikeHosts: d.render.adLikeHosts, gtmRequests: d.render.gtmRequests, thirdPartyHosts: d.render.thirdPartyHosts } : null,
+        recommendations: { topIssues: d.recommendations?.topIssues ?? [] },
+      };
       const res = await fetch('/api/audit', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          url: d.url,
-          checkText: d._checkText ?? '',
-          question,
-        }),
+        body: JSON.stringify({ url: d.url, checkText: d._checkText ?? '', question, report }),
       });
-
       const j = await res.json();
-
-      setLog((l) => [
-        ...l,
-        {
-          q: question,
-          a: res.ok ? j.answer : j.error || 'Request failed',
-          ids: res.ok ? j.findingIds ?? [] : [],
-          bad: res.ok ? j.unverified ?? [] : [],
-        },
-      ]);
+      setLog((l) => [...l, { q: question, a: res.ok ? j.answer : j.error || 'Request failed', ids: res.ok ? j.findingIds ?? [] : [], bad: res.ok ? j.unverified ?? [] : [] }]);
     } catch (err: any) {
-      setLog((l) => [
-        ...l,
-        {
-          q: question,
-          a: err.message || 'Request failed',
-          ids: [],
-          bad: [],
-        },
-      ]);
+      setLog((l) => [...l, { q: question, a: err.message || 'Request failed', ids: [], bad: [] }]);
     } finally {
       setBusy(false);
     }
@@ -222,46 +207,20 @@ function Chat({ d }: { d: any }) {
   return (
     <section>
       <h2 className="mb-3 text-xl font-semibold">
-        Ask about this report{' '}
-        <span className="text-sm font-normal text-slate-500">
-          (answers only from the evidence above)
-        </span>
+        Ask about this report <span className="text-sm font-normal text-slate-500">(answers only from the evidence above)</span>
       </h2>
-
       <div className="space-y-3">
         {log.map((x, i) => (
           <div key={i} className="rounded-xl border bg-white p-4 text-sm">
             <p className="font-medium">Q: {x.q}</p>
             <p className="mt-1 whitespace-pre-wrap">{x.a}</p>
-
-            {x.ids.length > 0 && (
-              <p className="mt-1 text-xs text-slate-500">
-                Evidence: {x.ids.join(', ')}
-              </p>
-            )}
-
-            {x.bad.length > 0 && (
-              <p className="mt-2 rounded bg-amber-50 p-2 text-xs text-amber-800">
-                ⚠ Not found in the report, verify: {x.bad.join(', ')}
-              </p>
-            )}
+            {x.ids.length > 0 && <p className="mt-1 text-xs text-slate-500">Evidence: {x.ids.join(', ')}</p>}
+            {x.bad.length > 0 && <p className="mt-2 rounded bg-amber-50 p-2 text-xs text-amber-800">⚠ Not found in the report, verify: {x.bad.join(', ')}</p>}
           </div>
         ))}
-
         <form onSubmit={ask} className="flex gap-2">
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="e.g. Why is LCP poor on mobile?"
-            className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm"
-          />
-          <button
-            type="submit"
-            disabled={busy}
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white disabled:opacity-60"
-          >
-            {busy ? 'Thinking…' : 'Ask'}
-          </button>
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="e.g. Why is LCP poor on mobile?" className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm" />
+          <button type="submit" disabled={busy} className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white disabled:opacity-60">{busy ? 'Thinking…' : 'Ask'}</button>
         </form>
       </div>
     </section>

@@ -1,8 +1,14 @@
 // Provider abstraction. Add a provider by returning another object with complete().
 export interface LLM { name: string; complete(system: string, user: string): Promise<string> }
 
-async function post(url: string, headers: Record<string, string>, body: unknown) {
+async function post(url: string, headers: Record<string, string>, body: unknown, retried = false): Promise<any> {
   const r = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json', ...headers }, body: JSON.stringify(body), signal: AbortSignal.timeout(90_000) });
+  if (r.status === 429 && !retried) {
+    // tokens-per-minute limit: wait as the server asks (max 20 s) and retry once
+    const wait = Math.min(Math.max(Number(r.headers.get('retry-after')) || 5, 1), 20);
+    await new Promise((res) => setTimeout(res, wait * 1000));
+    return post(url, headers, body, true);
+  }
   const j: any = await r.json().catch(() => ({}));
   if (!r.ok) {
     const msg = j?.error?.message ?? j?.error?.status ?? j?.message ?? '';
