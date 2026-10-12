@@ -1,0 +1,10 @@
+node_modules
+.next
+.env
+.env.local
+.env.*.local
+next-env.d.ts
+tsconfig.tsbuildinfo
+*.log
+.clasp.json
+inventory-output/

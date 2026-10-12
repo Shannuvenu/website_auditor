@@ -1,0 +1,15 @@
+[
+  { "pattern": "/", "path": "/", "match": true },
+  { "pattern": "/", "path": "/article/x", "match": false },
+  { "pattern": "/article/*", "path": "/article/some-story-1", "match": true },
+  { "pattern": "/article/*", "path": "/article/some-story-1/", "match": true },
+  { "pattern": "/article/*", "path": "/article/a/b", "match": false },
+  { "pattern": "/article/*", "path": "/article", "match": false },
+  { "pattern": "/news/**", "path": "/news/india/politics/story", "match": true },
+  { "pattern": "/news/**", "path": "/other/x", "match": false },
+  { "pattern": "/gallery/*-photos", "path": "/gallery/city-photos", "match": true },
+  { "pattern": "/gallery/*-photos", "path": "/gallery/city-videos", "match": false },
+  { "pattern": "/a.b/*", "path": "/aXb/c", "match": false },
+  { "pattern": "/a.b/*", "path": "/a.b/c", "match": true },
+  { "pattern": "/section/*/", "path": "/section/world", "match": true }
+]

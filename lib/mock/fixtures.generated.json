@@ -1,0 +1,5527 @@
+{
+ "templates": [
+  {
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "urlPattern": "/article/*",
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9",
+    "https://www.deccanherald.com/article/demo-article-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  },
+  {
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "urlPattern": "/section/*",
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9",
+    "https://www.deccanherald.com/section/demo-section-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  },
+  {
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "urlPattern": "/gallery/*",
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9",
+    "https://www.deccanherald.com/gallery/demo-gallery-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  },
+  {
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "urlPattern": "/article/*",
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9",
+    "https://www.prajavani.net/article/demo-article-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  },
+  {
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "urlPattern": "/section/*",
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9",
+    "https://www.prajavani.net/section/demo-section-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  },
+  {
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "urlPattern": "/gallery/*",
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9",
+    "https://www.prajavani.net/gallery/demo-gallery-10"
+   ],
+   "active": true,
+   "trafficWeight": null,
+   "notes": "Demo template (synthetic data)",
+   "problems": []
+  }
+ ],
+ "aggregates": [
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-mobile-20260922",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 46,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 4549,
+    "cls": 0.159,
+    "tbtMs": 471,
+    "fcpMs": 2279,
+    "speedIndexMs": 5132
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4507,
+    "cls": 0.13,
+    "inpMs": 246,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-7"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 674,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 1261,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7"
+     ],
+     "medianSavingsMs": 417,
+     "medianSavingsBytes": 335365,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-desktop-20260922",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 76,
+    "accessibility": 89
+   },
+   "labMetrics": {
+    "lcpMs": 2176,
+    "cls": 0.167,
+    "tbtMs": 125,
+    "fcpMs": 993,
+    "speedIndexMs": 2307
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2213,
+    "cls": 0.13,
+    "inpMs": 245,
+    "urlCount": 3
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4"
+   ],
+   "audits": [
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 929,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 643,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7"
+     ],
+     "medianSavingsMs": 547,
+     "medianSavingsBytes": 309610,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-mobile-20260922",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 64,
+    "accessibility": 92
+   },
+   "labMetrics": {
+    "lcpMs": 4491,
+    "cls": 0.156,
+    "tbtMs": 488,
+    "fcpMs": 2190,
+    "speedIndexMs": 5307
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6"
+   ],
+   "audits": [
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5"
+     ],
+     "medianSavingsMs": 675,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 5
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-desktop-20260922",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 86,
+    "accessibility": 93
+   },
+   "labMetrics": {
+    "lcpMs": 2194,
+    "cls": 0.165,
+    "tbtMs": 114,
+    "fcpMs": 964,
+    "speedIndexMs": 2311
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2146,
+    "cls": 0.15,
+    "inpMs": 235,
+    "urlCount": 5
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-10"
+   ],
+   "audits": [
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-10",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": 475,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-mobile-20260922",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 51,
+    "accessibility": 85
+   },
+   "labMetrics": {
+    "lcpMs": 4614,
+    "cls": 0.073,
+    "tbtMs": 469,
+    "fcpMs": 2240,
+    "speedIndexMs": 5031
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4478,
+    "cls": 0.145,
+    "inpMs": 236,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-10",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 478,
+     "medianSavingsBytes": 415300,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 212181,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-desktop-20260922",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 77,
+    "accessibility": 86
+   },
+   "labMetrics": {
+    "lcpMs": 2226,
+    "cls": 0.071,
+    "tbtMs": 114,
+    "fcpMs": 980,
+    "speedIndexMs": 2409
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2284,
+    "cls": 0.145,
+    "inpMs": 240,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 9,
+     "sampledCount": 10,
+     "affectedShare": 0.9,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 497,
+     "medianSavingsBytes": 335148,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 9
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 238081,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-7"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-mobile-20260922",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 58,
+    "accessibility": 88
+   },
+   "labMetrics": {
+    "lcpMs": 4623,
+    "cls": 0.079,
+    "tbtMs": 513,
+    "fcpMs": 2215,
+    "speedIndexMs": 5057
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4486,
+    "cls": 0.14,
+    "inpMs": 252,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-8"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 636,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5"
+     ],
+     "medianSavingsMs": 361,
+     "medianSavingsBytes": 330139,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-desktop-20260922",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 81,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 2172,
+    "cls": 0.057,
+    "tbtMs": 134,
+    "fcpMs": 960,
+    "speedIndexMs": 2409
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2179,
+    "cls": 0.15,
+    "inpMs": 240,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 760,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5"
+     ],
+     "medianSavingsMs": 488,
+     "medianSavingsBytes": 304769,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-mobile-20260922",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 66,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 4640,
+    "cls": 0.074,
+    "tbtMs": 475,
+    "fcpMs": 2259,
+    "speedIndexMs": 5197
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4436,
+    "cls": 0.14,
+    "inpMs": 226,
+    "urlCount": 3
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-7"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": 408,
+     "medianSavingsBytes": 249696,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-desktop-20260922",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 89,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 2143,
+    "cls": 0.07,
+    "tbtMs": 127,
+    "fcpMs": 1006,
+    "speedIndexMs": 2382
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2230,
+    "cls": 0.145,
+    "inpMs": 240,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-1"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6",
+      "https://www.prajavani.net/section/demo-section-9"
+     ],
+     "medianSavingsMs": 435,
+     "medianSavingsBytes": 239660,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_gallery-mobile-20260922",
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-22T02:14:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 56,
+    "accessibility": 84
+   },
+   "labMetrics": {
+    "lcpMs": 4566,
+    "cls": 0.073,
+    "tbtMs": 430,
+    "fcpMs": 2259,
+    "speedIndexMs": 5247
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-10",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-9",
+    "https://www.prajavani.net/gallery/demo-gallery-7"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": 392,
+     "medianSavingsBytes": 483155,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 160111,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-mobile-20260929",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 47,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 4534,
+    "cls": 0.161,
+    "tbtMs": 464,
+    "fcpMs": 2244,
+    "speedIndexMs": 5061
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4422,
+    "cls": 0.15,
+    "inpMs": 230,
+    "urlCount": 3
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-3"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 571,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 1044,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7"
+     ],
+     "medianSavingsMs": 387,
+     "medianSavingsBytes": 350403,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-desktop-20260929",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 77,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 2135,
+    "cls": 0.165,
+    "tbtMs": 116,
+    "fcpMs": 1012,
+    "speedIndexMs": 2371
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2242,
+    "cls": 0.13,
+    "inpMs": 247,
+    "urlCount": 3
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-3"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 755,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 1291,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 329,
+     "medianSavingsBytes": 276420,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 8
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-mobile-20260929",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 65,
+    "accessibility": 93
+   },
+   "labMetrics": {
+    "lcpMs": 4545,
+    "cls": 0.16,
+    "tbtMs": 493,
+    "fcpMs": 2220,
+    "speedIndexMs": 5152
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4493,
+    "cls": 0.15,
+    "inpMs": 237,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-2"
+   ],
+   "audits": [
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5"
+     ],
+     "medianSavingsMs": 457,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 5
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-desktop-20260929",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 88,
+    "accessibility": 94
+   },
+   "labMetrics": {
+    "lcpMs": 2141,
+    "cls": 0.152,
+    "tbtMs": 123,
+    "fcpMs": 971,
+    "speedIndexMs": 2282
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2246,
+    "cls": 0.15,
+    "inpMs": 230,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-3"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-8"
+     ],
+     "medianSavingsMs": 674,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-mobile-20260929",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 53,
+    "accessibility": 85
+   },
+   "labMetrics": {
+    "lcpMs": 4538,
+    "cls": 0.058,
+    "tbtMs": 516,
+    "fcpMs": 2215,
+    "speedIndexMs": 5137
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4315,
+    "cls": 0.14,
+    "inpMs": 257,
+    "urlCount": 1
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-5"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 9,
+     "sampledCount": 10,
+     "affectedShare": 0.9,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 515,
+     "medianSavingsBytes": 459160,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 9
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 208743,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-desktop-20260929",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 80,
+    "accessibility": 86
+   },
+   "labMetrics": {
+    "lcpMs": 2080,
+    "cls": 0.072,
+    "tbtMs": 115,
+    "fcpMs": 1026,
+    "speedIndexMs": 2374
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2300,
+    "cls": 0.15,
+    "inpMs": 234,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-1"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-10",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 577,
+     "medianSavingsBytes": 311597,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 216044,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-mobile-20260929",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 62,
+    "accessibility": 89
+   },
+   "labMetrics": {
+    "lcpMs": 4534,
+    "cls": 0.074,
+    "tbtMs": 475,
+    "fcpMs": 2264,
+    "speedIndexMs": 5020
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4529,
+    "cls": 0.155,
+    "inpMs": 238,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-5"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 615,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-8"
+     ],
+     "medianSavingsMs": 515,
+     "medianSavingsBytes": 221542,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-desktop-20260929",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 84,
+    "accessibility": 89
+   },
+   "labMetrics": {
+    "lcpMs": 2131,
+    "cls": 0.074,
+    "tbtMs": 125,
+    "fcpMs": 992,
+    "speedIndexMs": 2317
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2272,
+    "cls": 0.145,
+    "inpMs": 256,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-8"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 720,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5"
+     ],
+     "medianSavingsMs": 509,
+     "medianSavingsBytes": 377297,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-mobile-20260929",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 70,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 4532,
+    "cls": 0.083,
+    "tbtMs": 478,
+    "fcpMs": 2252,
+    "speedIndexMs": 5230
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4455,
+    "cls": 0.125,
+    "inpMs": 243,
+    "urlCount": 6
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-4"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": 444,
+     "medianSavingsBytes": 307157,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-desktop-20260929",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 90,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 2155,
+    "cls": 0.076,
+    "tbtMs": 129,
+    "fcpMs": 964,
+    "speedIndexMs": 2266
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2158,
+    "cls": 0.15,
+    "inpMs": 241,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": 441,
+     "medianSavingsBytes": 298686,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_gallery-mobile-20260929",
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 57,
+    "accessibility": 86
+   },
+   "labMetrics": {
+    "lcpMs": 4492,
+    "cls": 0.071,
+    "tbtMs": 460,
+    "fcpMs": 2267,
+    "speedIndexMs": 4942
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-10",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-10"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": 535,
+     "medianSavingsBytes": 415690,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 220464,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_gallery-desktop-20260929",
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-09-29T02:12:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 78,
+    "accessibility": 84
+   },
+   "labMetrics": {
+    "lcpMs": 2160,
+    "cls": 0.068,
+    "tbtMs": 112,
+    "fcpMs": 966,
+    "speedIndexMs": 2376
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-10",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-6"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": 455,
+     "medianSavingsBytes": 298759,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 109897,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-mobile-20261005",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 50,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 4445,
+    "cls": 0.153,
+    "tbtMs": 453,
+    "fcpMs": 2276,
+    "speedIndexMs": 5147
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4469,
+    "cls": 0.145,
+    "inpMs": 248,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 559,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 1152,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 486,
+     "medianSavingsBytes": 247336,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 8
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-desktop-20261005",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 78,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 2113,
+    "cls": 0.162,
+    "tbtMs": 121,
+    "fcpMs": 1024,
+    "speedIndexMs": 2308
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2297,
+    "cls": 0.13,
+    "inpMs": 233,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-2"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 519,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8"
+     ],
+     "medianSavingsMs": 1163,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7"
+     ],
+     "medianSavingsMs": 406,
+     "medianSavingsBytes": 277844,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-mobile-20261005",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 67,
+    "accessibility": 94
+   },
+   "labMetrics": {
+    "lcpMs": 4586,
+    "cls": 0.168,
+    "tbtMs": 488,
+    "fcpMs": 2256,
+    "speedIndexMs": 5085
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4432,
+    "cls": 0.15,
+    "inpMs": 239,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-3"
+   ],
+   "audits": [
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6",
+      "https://www.deccanherald.com/section/demo-section-7",
+      "https://www.deccanherald.com/section/demo-section-9"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": 596,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_section-desktop-20261005",
+   "templateId": "DH_SECTION",
+   "templateName": "Section",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 91,
+    "accessibility": 94
+   },
+   "labMetrics": {
+    "lcpMs": 1996,
+    "cls": 0.155,
+    "tbtMs": 110,
+    "fcpMs": 934,
+    "speedIndexMs": 2368
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2235,
+    "cls": 0.13,
+    "inpMs": 230,
+    "urlCount": 3
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/section/demo-section-1",
+    "https://www.deccanherald.com/section/demo-section-10",
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-4",
+    "https://www.deccanherald.com/section/demo-section-5",
+    "https://www.deccanherald.com/section/demo-section-6",
+    "https://www.deccanherald.com/section/demo-section-7",
+    "https://www.deccanherald.com/section/demo-section-8",
+    "https://www.deccanherald.com/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/section/demo-section-2",
+    "https://www.deccanherald.com/section/demo-section-3",
+    "https://www.deccanherald.com/section/demo-section-6"
+   ],
+   "audits": [
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5",
+      "https://www.deccanherald.com/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3",
+      "https://www.deccanherald.com/section/demo-section-4",
+      "https://www.deccanherald.com/section/demo-section-5"
+     ],
+     "medianSavingsMs": 537,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 5
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 3,
+     "sampledCount": 10,
+     "affectedShare": 0.3,
+     "affectedUrls": [
+      "https://www.deccanherald.com/section/demo-section-1",
+      "https://www.deccanherald.com/section/demo-section-2",
+      "https://www.deccanherald.com/section/demo-section-3"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-mobile-20261005",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 54,
+    "accessibility": 83
+   },
+   "labMetrics": {
+    "lcpMs": 4402,
+    "cls": 0.057,
+    "tbtMs": 442,
+    "fcpMs": 2295,
+    "speedIndexMs": 5010
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4421,
+    "cls": 0.15,
+    "inpMs": 243,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-8"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-10",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 534,
+     "medianSavingsBytes": 409064,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 207021,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_gallery-desktop-20261005",
+   "templateId": "DH_GALLERY",
+   "templateName": "Gallery",
+   "brand": "DH",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 77,
+    "accessibility": 85
+   },
+   "labMetrics": {
+    "lcpMs": 2099,
+    "cls": 0.077,
+    "tbtMs": 104,
+    "fcpMs": 980,
+    "speedIndexMs": 2331
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2300,
+    "cls": 0.14,
+    "inpMs": 248,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-1",
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-2",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-4",
+    "https://www.deccanherald.com/gallery/demo-gallery-5",
+    "https://www.deccanherald.com/gallery/demo-gallery-6",
+    "https://www.deccanherald.com/gallery/demo-gallery-7",
+    "https://www.deccanherald.com/gallery/demo-gallery-8",
+    "https://www.deccanherald.com/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/gallery/demo-gallery-10",
+    "https://www.deccanherald.com/gallery/demo-gallery-3",
+    "https://www.deccanherald.com/gallery/demo-gallery-8"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 9,
+     "sampledCount": 10,
+     "affectedShare": 0.9,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8",
+      "https://www.deccanherald.com/gallery/demo-gallery-9"
+     ],
+     "medianSavingsMs": 511,
+     "medianSavingsBytes": 454442,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 9
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5",
+      "https://www.deccanherald.com/gallery/demo-gallery-6",
+      "https://www.deccanherald.com/gallery/demo-gallery-7",
+      "https://www.deccanherald.com/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 217636,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.deccanherald.com/gallery/demo-gallery-1",
+      "https://www.deccanherald.com/gallery/demo-gallery-2",
+      "https://www.deccanherald.com/gallery/demo-gallery-3",
+      "https://www.deccanherald.com/gallery/demo-gallery-4",
+      "https://www.deccanherald.com/gallery/demo-gallery-5"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-mobile-20261005",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 63,
+    "accessibility": 88
+   },
+   "labMetrics": {
+    "lcpMs": 4529,
+    "cls": 0.072,
+    "tbtMs": 500,
+    "fcpMs": 2195,
+    "speedIndexMs": 5094
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4462,
+    "cls": 0.13,
+    "inpMs": 231,
+    "urlCount": 5
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-3"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 716,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 5,
+     "sampledCount": 10,
+     "affectedShare": 0.5,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5"
+     ],
+     "medianSavingsMs": 442,
+     "medianSavingsBytes": 311058,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 5
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_article-desktop-20261005",
+   "templateId": "PV_ARTICLE",
+   "templateName": "Article",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 83,
+    "accessibility": 88
+   },
+   "labMetrics": {
+    "lcpMs": 2153,
+    "cls": 0.063,
+    "tbtMs": 122,
+    "fcpMs": 954,
+    "speedIndexMs": 2362
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 2235,
+    "cls": 0.14,
+    "inpMs": 241,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10",
+    "https://www.prajavani.net/article/demo-article-2",
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-4",
+    "https://www.prajavani.net/article/demo-article-5",
+    "https://www.prajavani.net/article/demo-article-6",
+    "https://www.prajavani.net/article/demo-article-7",
+    "https://www.prajavani.net/article/demo-article-8",
+    "https://www.prajavani.net/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/article/demo-article-3",
+    "https://www.prajavani.net/article/demo-article-1",
+    "https://www.prajavani.net/article/demo-article-10"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-10",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6",
+      "https://www.prajavani.net/article/demo-article-7",
+      "https://www.prajavani.net/article/demo-article-8",
+      "https://www.prajavani.net/article/demo-article-9"
+     ],
+     "medianSavingsMs": 598,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-7"
+     ],
+     "medianSavingsMs": 498,
+     "medianSavingsBytes": 282581,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/article/demo-article-1",
+      "https://www.prajavani.net/article/demo-article-2",
+      "https://www.prajavani.net/article/demo-article-3",
+      "https://www.prajavani.net/article/demo-article-4",
+      "https://www.prajavani.net/article/demo-article-5",
+      "https://www.prajavani.net/article/demo-article-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-mobile-20261005",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 8,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 69,
+    "accessibility": 91
+   },
+   "labMetrics": {
+    "lcpMs": 4569,
+    "cls": 0.065,
+    "tbtMs": 508,
+    "fcpMs": 2248,
+    "speedIndexMs": 5141
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 4472,
+    "cls": 0.13,
+    "inpMs": 251,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-5"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 8,
+     "affectedShare": 0.75,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": 497,
+     "medianSavingsBytes": 314824,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 5,
+     "sampledCount": 8,
+     "affectedShare": 0.625,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_section-desktop-20261005",
+   "templateId": "PV_SECTION",
+   "templateName": "Section",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 91,
+    "accessibility": 90
+   },
+   "labMetrics": {
+    "lcpMs": 2119,
+    "cls": 0.077,
+    "tbtMs": 120,
+    "fcpMs": 983,
+    "speedIndexMs": 2353
+   },
+   "crux": {
+    "scope": "origin",
+    "lcpMs": 2257,
+    "cls": 0.145,
+    "inpMs": 251,
+    "urlCount": 4
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-2",
+    "https://www.prajavani.net/section/demo-section-3",
+    "https://www.prajavani.net/section/demo-section-4",
+    "https://www.prajavani.net/section/demo-section-5",
+    "https://www.prajavani.net/section/demo-section-6",
+    "https://www.prajavani.net/section/demo-section-7",
+    "https://www.prajavani.net/section/demo-section-8",
+    "https://www.prajavani.net/section/demo-section-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/section/demo-section-10",
+    "https://www.prajavani.net/section/demo-section-1",
+    "https://www.prajavani.net/section/demo-section-4"
+   ],
+   "audits": [
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4",
+      "https://www.prajavani.net/section/demo-section-5",
+      "https://www.prajavani.net/section/demo-section-6"
+     ],
+     "medianSavingsMs": 464,
+     "medianSavingsBytes": 281064,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/assets/ads-loader.js",
+       "urlCount": 6
+      },
+      {
+       "resource": "https://www.prajavani.net/assets/vendor.js",
+       "urlCount": 6
+      }
+     ]
+    },
+    {
+     "auditId": "link-name",
+     "title": "Links do not have a discernible name",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.prajavani.net/section/demo-section-1",
+      "https://www.prajavani.net/section/demo-section-2",
+      "https://www.prajavani.net/section/demo-section-3",
+      "https://www.prajavani.net/section/demo-section-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_gallery-mobile-20261005",
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "device": "mobile",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 58,
+    "accessibility": 84
+   },
+   "labMetrics": {
+    "lcpMs": 4458,
+    "cls": 0.075,
+    "tbtMs": 490,
+    "fcpMs": 2213,
+    "speedIndexMs": 5171
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-10",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-2"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": 583,
+     "medianSavingsBytes": 324390,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-10",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-10",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 201257,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-pv_gallery-desktop-20261005",
+   "templateId": "PV_GALLERY",
+   "templateName": "Gallery",
+   "brand": "PV",
+   "device": "desktop",
+   "trigger": "scheduled",
+   "generatedAt": "2026-10-05T02:11:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 83,
+    "accessibility": 85
+   },
+   "labMetrics": {
+    "lcpMs": 2093,
+    "cls": 0.078,
+    "tbtMs": 123,
+    "fcpMs": 973,
+    "speedIndexMs": 2386
+   },
+   "crux": {
+    "scope": "none",
+    "lcpMs": null,
+    "cls": null,
+    "inpMs": null,
+    "urlCount": 0
+   },
+   "sampleUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-10",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-3",
+    "https://www.prajavani.net/gallery/demo-gallery-4",
+    "https://www.prajavani.net/gallery/demo-gallery-5",
+    "https://www.prajavani.net/gallery/demo-gallery-6",
+    "https://www.prajavani.net/gallery/demo-gallery-7",
+    "https://www.prajavani.net/gallery/demo-gallery-8",
+    "https://www.prajavani.net/gallery/demo-gallery-9"
+   ],
+   "representativeUrls": [
+    "https://www.prajavani.net/gallery/demo-gallery-1",
+    "https://www.prajavani.net/gallery/demo-gallery-2",
+    "https://www.prajavani.net/gallery/demo-gallery-7"
+   ],
+   "audits": [
+    {
+     "auditId": "uses-responsive-images",
+     "title": "Properly size images",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": 367,
+     "medianSavingsBytes": 408002,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "modern-image-formats",
+     "title": "Serve images in next-gen formats",
+     "category": "performance",
+     "affectedCount": 8,
+     "sampledCount": 10,
+     "affectedShare": 0.8,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6",
+      "https://www.prajavani.net/gallery/demo-gallery-7",
+      "https://www.prajavani.net/gallery/demo-gallery-8"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": 166373,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.prajavani.net/media/hero.jpg",
+       "urlCount": 8
+      }
+     ]
+    },
+    {
+     "auditId": "image-alt",
+     "title": "Image elements do not have [alt] attributes",
+     "category": "accessibility",
+     "affectedCount": 6,
+     "sampledCount": 10,
+     "affectedShare": 0.6,
+     "affectedUrls": [
+      "https://www.prajavani.net/gallery/demo-gallery-1",
+      "https://www.prajavani.net/gallery/demo-gallery-2",
+      "https://www.prajavani.net/gallery/demo-gallery-3",
+      "https://www.prajavani.net/gallery/demo-gallery-4",
+      "https://www.prajavani.net/gallery/demo-gallery-5",
+      "https://www.prajavani.net/gallery/demo-gallery-6"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  },
+  {
+   "schemaVersion": 1,
+   "runId": "mock-dh_article-mobile-20261006-rt",
+   "templateId": "DH_ARTICLE",
+   "templateName": "Article",
+   "brand": "DH",
+   "device": "mobile",
+   "trigger": "retest",
+   "generatedAt": "2026-10-06T04:40:00.000Z",
+   "urlCount": 10,
+   "urlsMeasured": 10,
+   "runsPerUrl": 3,
+   "scores": {
+    "performance": 62,
+    "accessibility": 89
+   },
+   "labMetrics": {
+    "lcpMs": 3955,
+    "cls": 0.182,
+    "tbtMs": 456,
+    "fcpMs": 2252,
+    "speedIndexMs": 5162
+   },
+   "crux": {
+    "scope": "url",
+    "lcpMs": 4546,
+    "cls": 0.155,
+    "inpMs": 247,
+    "urlCount": 2
+   },
+   "sampleUrls": [
+    "https://www.deccanherald.com/article/demo-article-1",
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-2",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4",
+    "https://www.deccanherald.com/article/demo-article-5",
+    "https://www.deccanherald.com/article/demo-article-6",
+    "https://www.deccanherald.com/article/demo-article-7",
+    "https://www.deccanherald.com/article/demo-article-8",
+    "https://www.deccanherald.com/article/demo-article-9"
+   ],
+   "representativeUrls": [
+    "https://www.deccanherald.com/article/demo-article-10",
+    "https://www.deccanherald.com/article/demo-article-3",
+    "https://www.deccanherald.com/article/demo-article-4"
+   ],
+   "audits": [
+    {
+     "auditId": "render-blocking-resources",
+     "title": "Eliminate render-blocking resources",
+     "category": "performance",
+     "affectedCount": 10,
+     "sampledCount": 10,
+     "affectedShare": 1,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-10",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7",
+      "https://www.deccanherald.com/article/demo-article-8",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": 679,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/fonts.css",
+       "urlCount": 10
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/main.css",
+       "urlCount": 10
+      }
+     ]
+    },
+    {
+     "auditId": "unused-javascript",
+     "title": "Reduce unused JavaScript",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-7"
+     ],
+     "medianSavingsMs": 324,
+     "medianSavingsBytes": 300077,
+     "repeatedOffenders": [
+      {
+       "resource": "https://www.deccanherald.com/assets/ads-loader.js",
+       "urlCount": 7
+      },
+      {
+       "resource": "https://www.deccanherald.com/assets/vendor.js",
+       "urlCount": 7
+      }
+     ]
+    },
+    {
+     "auditId": "unsized-images",
+     "title": "Image elements do not have explicit width and height",
+     "category": "performance",
+     "affectedCount": 7,
+     "sampledCount": 10,
+     "affectedShare": 0.7,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4",
+      "https://www.deccanherald.com/article/demo-article-5",
+      "https://www.deccanherald.com/article/demo-article-6",
+      "https://www.deccanherald.com/article/demo-article-9"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "color-contrast",
+     "title": "Background and foreground colors do not have a sufficient contrast ratio",
+     "category": "accessibility",
+     "affectedCount": 4,
+     "sampledCount": 10,
+     "affectedShare": 0.4,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-2",
+      "https://www.deccanherald.com/article/demo-article-3",
+      "https://www.deccanherald.com/article/demo-article-4"
+     ],
+     "medianSavingsMs": null,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    },
+    {
+     "auditId": "prioritize-lcp-image",
+     "title": "Preload Largest Contentful Paint image",
+     "category": "performance",
+     "affectedCount": 2,
+     "sampledCount": 10,
+     "affectedShare": 0.2,
+     "affectedUrls": [
+      "https://www.deccanherald.com/article/demo-article-1",
+      "https://www.deccanherald.com/article/demo-article-3"
+     ],
+     "medianSavingsMs": 1008,
+     "medianSavingsBytes": null,
+     "repeatedOffenders": []
+    }
+   ]
+  }
+ ],
+ "runs": [
+  {
+   "runId": "mock-dh_article-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 46,
+    "accessibility": 90,
+    "lcpMs": 4549,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_article-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 76,
+    "accessibility": 89,
+    "lcpMs": 2176,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 64,
+    "accessibility": 92,
+    "lcpMs": 4491,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 86,
+    "accessibility": 93,
+    "lcpMs": 2194,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 51,
+    "accessibility": 85,
+    "lcpMs": 4614,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 77,
+    "accessibility": 86,
+    "lcpMs": 2226,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 58,
+    "accessibility": 88,
+    "lcpMs": 4623,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 81,
+    "accessibility": 90,
+    "lcpMs": 2172,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 66,
+    "accessibility": 91,
+    "lcpMs": 4640,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 89,
+    "accessibility": 91,
+    "lcpMs": 2143,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-mobile-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 56,
+    "accessibility": 84,
+    "lcpMs": 4566,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-desktop-20260922",
+   "createdAt": "2026-09-22T02:05:00.000Z",
+   "startedAt": "2026-09-22T02:05:00.000Z",
+   "finishedAt": "2026-09-22T02:14:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "desktop",
+   "status": "failed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 78,
+    "accessibility": 85,
+    "lcpMs": 2170,
+    "failingAudits": 3
+   },
+   "error": "PageSpeed API unavailable after retries"
+  },
+  {
+   "runId": "mock-dh_article-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 47,
+    "accessibility": 91,
+    "lcpMs": 4534,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_article-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 77,
+    "accessibility": 90,
+    "lcpMs": 2135,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 65,
+    "accessibility": 93,
+    "lcpMs": 4545,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 88,
+    "accessibility": 94,
+    "lcpMs": 2141,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 53,
+    "accessibility": 85,
+    "lcpMs": 4538,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 80,
+    "accessibility": 86,
+    "lcpMs": 2080,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 62,
+    "accessibility": 89,
+    "lcpMs": 4534,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 84,
+    "accessibility": 89,
+    "lcpMs": 2131,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 70,
+    "accessibility": 91,
+    "lcpMs": 4532,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 90,
+    "accessibility": 90,
+    "lcpMs": 2155,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-mobile-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 57,
+    "accessibility": 86,
+    "lcpMs": 4492,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-desktop-20260929",
+   "createdAt": "2026-09-29T02:03:00.000Z",
+   "startedAt": "2026-09-29T02:03:00.000Z",
+   "finishedAt": "2026-09-29T02:12:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 78,
+    "accessibility": 84,
+    "lcpMs": 2160,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_article-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 50,
+    "accessibility": 91,
+    "lcpMs": 4445,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_article-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 78,
+    "accessibility": 90,
+    "lcpMs": 2113,
+    "failingAudits": 5
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 67,
+    "accessibility": 94,
+    "lcpMs": 4586,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_section-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 91,
+    "accessibility": 94,
+    "lcpMs": 1996,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 54,
+    "accessibility": 83,
+    "lcpMs": 4402,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_gallery-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "DH",
+   "templateId": "DH_GALLERY",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 77,
+    "accessibility": 85,
+    "lcpMs": 2099,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 63,
+    "accessibility": 88,
+    "lcpMs": 4529,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_article-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_ARTICLE",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 83,
+    "accessibility": 88,
+    "lcpMs": 2153,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "mobile",
+   "status": "partial",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 2,
+   "summary": {
+    "urlsMeasured": 8,
+    "performance": 69,
+    "accessibility": 91,
+    "lcpMs": 4569,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_section-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_SECTION",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 91,
+    "accessibility": 90,
+    "lcpMs": 2119,
+    "failingAudits": 2
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-mobile-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 58,
+    "accessibility": 84,
+    "lcpMs": 4458,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-pv_gallery-desktop-20261005",
+   "createdAt": "2026-10-05T02:02:00.000Z",
+   "startedAt": "2026-10-05T02:02:00.000Z",
+   "finishedAt": "2026-10-05T02:11:00.000Z",
+   "trigger": "scheduled",
+   "requestedBy": null,
+   "brand": "PV",
+   "templateId": "PV_GALLERY",
+   "device": "desktop",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 83,
+    "accessibility": 85,
+    "lcpMs": 2093,
+    "failingAudits": 3
+   },
+   "error": null
+  },
+  {
+   "runId": "mock-dh_article-mobile-20261006-rt",
+   "createdAt": "2026-10-06T04:31:00.000Z",
+   "startedAt": "2026-10-06T04:31:00.000Z",
+   "finishedAt": "2026-10-06T04:40:00.000Z",
+   "trigger": "retest",
+   "requestedBy": "dev",
+   "brand": "DH",
+   "templateId": "DH_ARTICLE",
+   "device": "mobile",
+   "status": "completed",
+   "urlCount": 10,
+   "urlsDone": 10,
+   "urlsFailed": 0,
+   "summary": {
+    "urlsMeasured": 10,
+    "performance": 62,
+    "accessibility": 89,
+    "lcpMs": 3955,
+    "failingAudits": 5
+   },
+   "error": null
+  }
+ ]
+}

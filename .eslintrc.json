@@ -1,0 +1,4 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": ["tmp_old/", "apps-script/", ".next/", "node_modules/"]
+}

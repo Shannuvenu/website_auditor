@@ -1,0 +1,6 @@
+template_id,template_name,brand,url_pattern,sample_urls,active,traffic_weight,notes
+DH_ARTICLE,Article,DH,/article/*,"https://www.deccanherald.com/article/REPLACE-1
+https://www.deccanherald.com/article/REPLACE-2
+https://www.deccanherald.com/article/REPLACE-3
+https://www.deccanherald.com/article/REPLACE-4
+https://www.deccanherald.com/article/REPLACE-5",FALSE,,EXAMPLE ONLY: replace patterns and URLs with the approved inventory (Gate 0)
