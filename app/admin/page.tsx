@@ -1,3 +1,4 @@
+import { AdminAccountForm } from '@/components/AdminAccountForm';
 import { AdminMatchTool } from '@/components/AdminMatchTool';
 import { AppShell } from '@/components/AppShell';
 import { StateMessage } from '@/components/StateMessage';
@@ -36,6 +37,11 @@ export default async function AdminPage() {
           <p className="mt-3 text-xs text-slate-500">
             Secrets are never shown. The Apps Script source, Script Properties and triggers are managed only in the Apps Script editor by the admin; see the README.
           </p>
+        </section>
+
+        <section className="rounded-lg border border-slate-200 bg-white p-4">
+          <h2 className="mb-2 font-semibold">Admin account</h2>
+          <AdminAccountForm username={session.username} enabled={config.dataSource === 'apps-script'} />
         </section>
 
         <section className="rounded-lg border border-slate-200 bg-white p-4">

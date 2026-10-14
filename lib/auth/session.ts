@@ -8,6 +8,8 @@ export interface Session {
   username: string;
   role: Role;
   expiresAt: number; // unix seconds
+  /** Credential version this session was issued for. '0' = account comes from AUTH_USERS. */
+  cv: string;
 }
 
 const encoder = new TextEncoder();
@@ -36,8 +38,8 @@ async function hmacKey(): Promise<CryptoKey> {
   return crypto.subtle.importKey('raw', encoder.encode(getSecret()), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify']);
 }
 
-export async function createSessionToken(username: string, role: Role, now = Date.now()): Promise<string> {
-  const session: Session = { username, role, expiresAt: Math.floor(now / 1000) + SESSION_MAX_AGE_SECONDS };
+export async function createSessionToken(username: string, role: Role, now = Date.now(), cv = '0'): Promise<string> {
+  const session: Session = { username, role, expiresAt: Math.floor(now / 1000) + SESSION_MAX_AGE_SECONDS, cv };
   const payload = toBase64Url(encoder.encode(JSON.stringify(session)));
   const signature = await crypto.subtle.sign('HMAC', await hmacKey(), encoder.encode(payload));
   return `v1.${payload}.${toBase64Url(new Uint8Array(signature))}`;
@@ -55,7 +57,7 @@ export async function verifySessionToken(token: string | undefined | null, now =
     if (typeof data.username !== 'string' || typeof data.expiresAt !== 'number') return null;
     if (data.role !== 'ADMIN' && data.role !== 'DEVELOPER') return null;
     if (data.expiresAt <= Math.floor(now / 1000)) return null;
-    return { username: data.username, role: data.role, expiresAt: data.expiresAt };
+        return { username: data.username, role: data.role, expiresAt: data.expiresAt, cv: typeof data.cv === 'string' ? data.cv : '0' };
   } catch {
     return null;
   }

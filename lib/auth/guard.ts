@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { isDeveloperRetestAllowed } from '@/lib/config/env';
 import { can, type Permission } from './rbac';
 import { readCookie, SESSION_COOKIE, verifySessionToken, type Session } from './session';
+import { isSessionCurrent } from './users';
 
 export type AuthResult = { ok: true; session: Session } | { ok: false; response: NextResponse };
 
@@ -13,6 +14,9 @@ export function jsonError(status: number, code: string, message: string, headers
 export async function authorize(req: Request, permission: Permission): Promise<AuthResult> {
   const session = await verifySessionToken(readCookie(req.headers.get('cookie'), SESSION_COOKIE));
   if (!session) return { ok: false, response: jsonError(401, 'UNAUTHENTICATED', 'Sign in required') };
+  if (!(await isSessionCurrent(session))) {
+    return { ok: false, response: jsonError(401, 'SESSION_REVOKED', 'Your credentials changed. Sign in again.') };
+  }
   if (!can(session.role, permission, { developerRetest: isDeveloperRetestAllowed() })) {
     return { ok: false, response: jsonError(403, 'FORBIDDEN', 'You do not have permission for this action') };
   }

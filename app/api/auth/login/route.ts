@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { jsonError, isSameOrigin } from '@/lib/auth/guard';
 import { rateLimit } from '@/lib/auth/rate-limit';
 import { createSessionToken, SESSION_COOKIE, sessionCookieOptions } from '@/lib/auth/session';
-import { authenticate } from '@/lib/auth/users';
+import { authenticate, loadEffectiveUsers } from '@/lib/auth/users';
 
 export const runtime = 'nodejs';
 
@@ -20,12 +20,12 @@ export async function POST(req: Request) {
     return jsonError(429, 'RATE_LIMITED', 'Too many attempts. Try again later.', { 'Retry-After': String(limit.retryAfterSeconds) });
   }
 
-  const user = await authenticate(parsed.data.username, parsed.data.password);
+    const user = await authenticate(parsed.data.username, parsed.data.password, await loadEffectiveUsers());
   if (!user) return jsonError(401, 'INVALID_CREDENTIALS', 'Invalid username or password');
 
   let token: string;
   try {
-    token = await createSessionToken(user.username, user.role);
+        token = await createSessionToken(user.username, user.role, Date.now(), user.version ?? '0');
   } catch {
     console.error('[auth] SESSION_SECRET is missing or shorter than 32 characters');
     return jsonError(500, 'NOT_CONFIGURED', 'The server is not configured for sign-in');

@@ -4,7 +4,7 @@ import { can } from '@/lib/auth/rbac';
 import { resetRateLimit, rateLimit } from '@/lib/auth/rate-limit';
 import { hashPassword, verifyPassword } from '@/lib/auth/password';
 import { createSessionToken, SESSION_COOKIE, verifySessionToken } from '@/lib/auth/session';
-import { authenticate, loadUsers } from '@/lib/auth/users';
+import { applyAdminOverride, authenticate, loadUsers } from '@/lib/auth/users';
 import { middleware } from '../middleware';
 import { GET as getTemplates } from '@/app/api/templates/route';
 import { GET as getRuns } from '@/app/api/runs/route';
@@ -226,5 +226,20 @@ describe('rate limiter', () => {
     expect(rateLimit('k', 2, 1000, 1).allowed).toBe(true);
     expect(rateLimit('k', 2, 1000, 2).allowed).toBe(false);
     expect(rateLimit('k', 2, 1000, 1500).allowed).toBe(true);
+  });
+});
+describe('admin account override', () => {
+  it('replaces the env ADMIN and keeps developers', () => {
+    const env = loadUsers();
+    const stored = { username: 'boss', passwordHash: `scrypt:16384:8:1:${'A'.repeat(22)}:${'B'.repeat(86)}`, version: 'v1', updatedAt: '2026-10-14T00:00:00Z' };
+    const merged = applyAdminOverride(env, stored);
+    expect(merged.filter((u) => u.role === 'ADMIN').map((u) => u.username)).toEqual(['boss']);
+    expect(merged.some((u) => u.username === 'dev')).toBe(true);
+    expect(applyAdminOverride(env, null)).toEqual(env);
+  });
+
+  it('carries the credential version in the session', async () => {
+    expect(await verifySessionToken(await createSessionToken('boss', 'ADMIN', Date.now(), 'v1'))).toMatchObject({ username: 'boss', cv: 'v1' });
+    expect((await verifySessionToken(await createSessionToken('dev', 'DEVELOPER')))?.cv).toBe('0');
   });
 });
